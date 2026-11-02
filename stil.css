@@ -1,8 +1,8 @@
 /* stefanstojkovic.rs: zajednički stil */
 :root {
-  --crna: #0D0D0D;
-  --crna-2: #161616;
-  --crna-3: #222;
+  --crna: #1C1B1B;
+  --crna-2: #252424;
+  --crna-3: #2E2D2D;
   --narandzasta: #E8500A;
   --narandzasta-tamna: #C24206;
   --krem: #F6F3EE;
@@ -81,7 +81,7 @@ p { margin: 0 0 1em; }
 .tamna .dugme.obrubljeno, .narandzasta .dugme.obrubljeno, .hero .dugme.obrubljeno { color: var(--bela); border-color: var(--bela); }
 .tamna .dugme.obrubljeno:hover, .narandzasta .dugme.obrubljeno:hover, .hero .dugme.obrubljeno:hover { background: var(--bela); color: var(--crna); }
 .narandzasta .dugme { background: var(--crna); border-color: var(--crna); }
-.narandzasta .dugme:hover { background: #000; }
+.narandzasta .dugme:hover { background: #111010; }
 .dugmad { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
 .centar .dugmad { justify-content: center; }
 .napomena-dugme { font-size: .9rem; color: var(--tekst-2); margin-top: 12px; }
@@ -90,7 +90,7 @@ p { margin: 0 0 1em; }
 /* Zaglavlje */
 .zaglavlje {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(13,13,13,.96);
+  background: rgba(28,27,27,.96);
   backdrop-filter: saturate(140%) blur(8px);
   color: var(--bela);
   border-bottom: 1px solid var(--linija-tamna);
