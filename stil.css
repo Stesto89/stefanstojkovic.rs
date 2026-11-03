@@ -448,3 +448,4 @@ p { margin: 0 0 1em; }
   .svetlo-okvir { display: block; padding: 76px 12px 12px; }
   .svetlo-okvir img { max-width: none; max-height: none; width: 1600px; }
 }
+.pravno .firma { background: var(--krem); border-radius: 12px; padding: 16px 20px; color: var(--tekst); line-height: 1.6; }
