@@ -232,6 +232,7 @@ p { margin: 0 0 1em; }
 /* Rezultati */
 .rezultat { padding: 32px; }
 .rezultat .naslov-brojka { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 14px; }
+.rezultat .foto { width: calc(100% + 64px); max-width: none; margin: -32px -32px 22px; aspect-ratio: 16/9; object-fit: cover; border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; }
 .rezultat .ko { display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--linija); }
 .rezultat .ko img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
 .rezultat .ko strong { display: block; }
