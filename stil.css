@@ -180,11 +180,22 @@ p { margin: 0 0 1em; }
 /* Misli vlasnika */
 .misli { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 @media (max-width: 700px) { .misli { grid-template-columns: 1fr; } }
+.misli { display: flex; flex-direction: column; gap: 22px; max-width: 760px; }
+.misli .misao { max-width: 520px; align-self: flex-start; }
+.misli .misao:nth-child(even) { align-self: flex-end; }
 .misao {
-  background: var(--bela); border-left: 4px solid var(--narandzasta);
-  padding: 22px 24px; border-radius: 0 var(--radius) var(--radius) 0;
-  font-size: 1.08rem; font-style: italic; box-shadow: var(--senka);
+  position: relative; background: var(--bela); border: 1px solid var(--linija);
+  padding: 18px 22px; border-radius: 20px 20px 20px 6px;
+  font-size: 1.06rem; font-weight: 600; line-height: 1.45; box-shadow: var(--senka);
 }
+.misao::after {
+  content: ""; position: absolute; left: -1px; bottom: -10px; width: 18px; height: 12px;
+  background: var(--bela); border-left: 1px solid var(--linija);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.misli .misao:nth-child(even) { background: var(--narandzasta); color: var(--bela); border-color: var(--narandzasta); border-radius: 20px 20px 6px 20px; }
+.misli .misao:nth-child(even)::after { left: auto; right: -1px; background: var(--narandzasta); border: 0; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+
 .misao small { display: block; font-style: normal; font-size: .9rem; color: var(--tekst-2); margin-top: 8px; }
 
 /* Dve kolone tekst + slika */
@@ -215,6 +226,20 @@ p { margin: 0 0 1em; }
 }
 .korak h3 { color: var(--bela); }
 .korak p { color: var(--tekst-svetli); margin: 0; }
+.koraci.svetli .korak { background: var(--bela); border-color: var(--linija); box-shadow: var(--senka); }
+.koraci.svetli .korak h3 { color: var(--tekst); }
+.koraci.svetli .korak p { color: var(--tekst-2); }
+@media (min-width: 901px) {
+  .koraci.svetli .korak:not(:last-child)::after { content: "→"; position: absolute; right: -20px; top: 38px; font-size: 1.4rem; font-weight: 800; color: var(--naglasak); }
+}
+
+/* Pre → posle u tekstu */
+.pre-posle-traka { display: grid; grid-template-columns: repeat(auto-fit, minmax(95px, 1fr)); gap: 12px; margin: 4px 0 18px; }
+.pre-posle-traka div { background: var(--bela); border: 1px solid var(--linija); border-radius: 12px; padding: 14px 14px 12px; box-shadow: var(--senka); }
+.pre-posle-traka strong { display: block; font-size: 1.5rem; font-weight: 800; color: var(--naglasak); letter-spacing: -0.03em; line-height: 1.1; }
+.pre-posle-traka span { display: block; font-size: .85rem; color: var(--tekst-2); margin-top: 4px; line-height: 1.35; }
+.tamna .pre-posle-traka div { background: var(--crna-2); border-color: var(--linija-tamna); box-shadow: none; }
+.tamna .pre-posle-traka span { color: var(--tekst-svetli); }
 
 /* Meseci programa */
 .meseci { display: grid; gap: 22px; }
@@ -377,3 +402,31 @@ p { margin: 0 0 1em; }
 .yt-linkovi { margin-top: auto; padding-top: 6px; display: flex; flex-direction: column; gap: 6px; }
 .yt-cta { font-weight: 700; color: var(--narandzasta); text-decoration: none; font-size: .95rem; }
 .yt-cta:hover { text-decoration: underline; }
+
+/* Traka sa osnovnim informacijama ispod hero dela */
+.cinjenice { background: var(--crna-2); border-top: 1px solid var(--linija-tamna); color: var(--bela); }
+.cinjenice .kontejner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.cinjenice .kontejner > div { padding: 22px 20px; border-left: 1px solid var(--linija-tamna); font-weight: 600; font-size: .98rem; line-height: 1.4; }
+.cinjenice .kontejner > div:first-child { border-left: 0; padding-left: 0; }
+.cinjenice b { display: block; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--naglasak); margin-bottom: 6px; }
+@media (max-width: 900px) {
+  .cinjenice .kontejner { grid-template-columns: 1fr 1fr; }
+  .cinjenice .kontejner > div { padding: 16px 14px; border-left: 0; border-top: 1px solid var(--linija-tamna); }
+  .cinjenice .kontejner > div:nth-child(-n+2) { border-top: 0; }
+  .cinjenice .kontejner > div:nth-child(odd) { padding-left: 0; }
+}
+
+/* Primer mape u bojama */
+.mapa-primer { margin: 0; background: var(--bela); border: 1px solid var(--linija); border-radius: var(--radius); box-shadow: var(--senka); padding: 18px; }
+.mapa-primer img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.mapa-primer figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 14px; font-size: .9rem; color: var(--tekst-2); }
+.tacka-boja { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-left: 6px; }
+.tacka-boja:first-child { margin-left: 0; }
+.tacka-boja.zeleno { background: #2DC653; } .tacka-boja.zuto { background: #F5D547; } .tacka-boja.crveno { background: #F25C5C; } .tacka-boja.sivo { background: #A9A9A9; }
+@media (max-width: 640px) { .mapa-primer { padding: 8px; } }
+@media (max-width: 640px) {
+  .pre-posle-traka { gap: 8px; }
+  .pre-posle-traka div { padding: 12px 10px 10px; }
+  .pre-posle-traka strong { font-size: 1.25rem; }
+  .pre-posle-traka.cetiri { grid-template-columns: 1fr 1fr; }
+}
