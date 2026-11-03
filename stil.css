@@ -3,9 +3,8 @@
   --crna: #1C1B1B;
   --crna-2: #252424;
   --crna-3: #2E2D2D;
-  --narandzasta: #E8500A;
-  --narandzasta-tamna: #C24206;
-  --narandzasta-meka: #D47040;
+  --narandzasta: #D47040;
+  --narandzasta-tamna: #B35A32;
   --krem: #F6F3EE;
   --bela: #FFFFFF;
   --tekst: #151515;
@@ -45,7 +44,7 @@ p { margin: 0 0 1em; }
 .sekcija.krem { background: var(--krem); }
 .sekcija.tamna { background: var(--crna); color: var(--bela); }
 .sekcija.tamna p, .sekcija.tamna li { color: var(--tekst-svetli); }
-.sekcija.narandzasta { background: var(--narandzasta-meka); color: var(--bela); }
+.sekcija.narandzasta { background: var(--narandzasta); color: var(--bela); }
 .centar { text-align: center; }
 .centar .uvod { margin-left: auto; margin-right: auto; }
 
