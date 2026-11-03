@@ -430,3 +430,21 @@ p { margin: 0 0 1em; }
   .pre-posle-traka strong { font-size: 1.25rem; }
   .pre-posle-traka.cetiri { grid-template-columns: 1fr 1fr; }
 }
+
+/* Uvećana slika (mapa) */
+.uvecaj { cursor: zoom-in; display: block; }
+.svetlo { position: fixed; inset: 0; z-index: 1000; background: rgba(20,19,19,.92); }
+.svetlo[hidden] { display: none; }
+.svetlo-okvir { position: absolute; inset: 0; overflow: auto; display: flex; align-items: center; justify-content: center; padding: 72px 24px 24px; -webkit-overflow-scrolling: touch; }
+.svetlo-okvir img { max-width: 100%; max-height: 100%; width: auto; height: auto; background: #fff; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+.svetlo-x {
+  position: fixed; top: 16px; right: 16px; z-index: 2; width: 48px; height: 48px; border-radius: 50%;
+  border: 0; background: var(--bela); color: var(--crna); display: grid; place-items: center; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+.svetlo-x svg { width: 22px; height: 22px; }
+.svetlo-x:hover, .svetlo-x:focus-visible { background: var(--narandzasta); color: var(--bela); outline: none; }
+@media (max-width: 760px) {
+  .svetlo-okvir { display: block; padding: 76px 12px 12px; }
+  .svetlo-okvir img { max-width: none; max-height: none; width: 1600px; }
+}

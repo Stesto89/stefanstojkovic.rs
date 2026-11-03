@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stil.css?v=1793706664">
+<link rel="stylesheet" href="stil.css?v=1793707039">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C1B1B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' fill='%23D47040' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -112,7 +112,7 @@
       <p class="uvod">Na vrhu je svrha i cilj firme, ispod su oblasti i uslovi bez kojih cilj ne može. Svaka žalba tima stoji uz deo koji je izaziva, a boja pokazuje stanje. Sivo su konflikti: dva cilja koja se sudaraju i koče biznis.</p>
     </div>
     <figure class="mapa-primer">
-      <a href="img/mapa-primer.jpg" target="_blank" rel="noopener"><img src="img/mapa-primer.jpg" alt="Primer mape u bojama sa radionice: svrha, cilj, kritični faktori uspeha i neophodni uslovi, sa žalbama tima" loading="lazy" width="2000" height="1308"></a>
+      <a href="img/mapa-primer.jpg" class="uvecaj" aria-label="Uvećaj mapu"><img src="img/mapa-primer.jpg" alt="Primer mape u bojama sa radionice: svrha, cilj, kritični faktori uspeha i neophodni uslovi, sa žalbama tima" loading="lazy" width="2000" height="1308"></a>
       <figcaption><span class="tacka-boja zeleno"></span>radi <span class="tacka-boja zuto"></span>u toku, nestabilno <span class="tacka-boja crveno"></span>ne radi <span class="tacka-boja sivo"></span>sukob ciljeva · Klikni za punu veličinu</figcaption>
     </figure>
   </div>
@@ -190,6 +190,25 @@
     <div class="dugmad"><a class="dugme" href="poziv.html">Zakaži poziv</a></div>
   </div>
 </section>
+
+<div class="svetlo" id="svetlo" role="dialog" aria-modal="true" aria-label="Mapa uskih grla i konflikata" hidden>
+  <button class="svetlo-x" type="button" aria-label="Zatvori">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <div class="svetlo-okvir"><img alt="Mapa uskih grla i konflikata, uvećano"></div>
+</div>
+<script>
+(function(){
+  var s=document.getElementById('svetlo'); if(!s) return;
+  var img=s.querySelector('img'), x=s.querySelector('.svetlo-x'), poslednji=null;
+  function otvori(e){ e.preventDefault(); poslednji=this; img.src=this.getAttribute('href'); s.hidden=false; document.body.style.overflow='hidden'; x.focus(); }
+  function zatvori(){ s.hidden=true; document.body.style.overflow=''; if(poslednji) poslednji.focus(); }
+  document.querySelectorAll('a.uvecaj').forEach(function(a){ a.addEventListener('click', otvori); });
+  x.addEventListener('click', zatvori);
+  s.addEventListener('click', function(e){ if(e.target===s || e.target.classList.contains('svetlo-okvir')) zatvori(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !s.hidden) zatvori(); });
+})();
+</script>
 
 </main>
 <footer class="podnozje">
