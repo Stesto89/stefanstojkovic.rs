@@ -347,7 +347,7 @@ p { margin: 0 0 1em; }
 /* Zvanja */
 .zvanja { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .zvanje { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--linija-tamna); background: var(--crna-2); color: var(--bela); border-radius: 999px; padding: 8px 16px 8px 10px; font-size: .9rem; font-weight: 700; }
-.zvanje::before { content: ""; width: 22px; height: 22px; border-radius: 50%; background: var(--narandzasta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat; }
+.zvanje::before { content: ""; flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: var(--narandzasta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat; }
 .sekcija:not(.tamna) .zvanje { background: var(--bela); color: var(--tekst); border-color: var(--linija); }
 
 /* Hero: stubovi sistema i dokaz */
