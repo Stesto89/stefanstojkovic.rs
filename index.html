@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stil.css?v=1793707499">
+<link rel="stylesheet" href="stil.css?v=1793813064">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C1B1B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' fill='%23D47040' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -294,9 +294,46 @@
     </div>
   </div>
 </footer>
+<div class="popup" id="popup" data-sekunde="40" role="dialog" aria-modal="true" aria-labelledby="popup-naslov" hidden>
+  <div class="popup-kartica">
+    <button class="popup-x" type="button" aria-label="Zatvori"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <h2 id="popup-naslov">Ne znaš odakle da kreneš?</h2>
+    <p>Za 5 minuta saznaj u kojoj je fazi tvoj biznis i šta te tačno drži.</p>
+    <a class="dugme popup-cta" href="https://sistem.stefanstojkovic.rs/faza-biznisa" target="_blank" rel="noopener">Uradi upitnik</a>
+    <button class="popup-ne" type="button">Ne sada</button>
+  </div>
+</div>
 <script>
 (function(){var d=document.querySelector('.meni-dugme'),m=document.getElementById('meni');
 if(!d||!m)return;d.addEventListener('click',function(){var o=m.classList.toggle('otvoren');d.setAttribute('aria-expanded',o)});})();
+</script>
+<script>
+(function(){
+  var p=document.getElementById('popup'); if(!p) return;
+  var K='ss_popup', DAN=864e5;
+  function get(k){ try{ return +localStorage.getItem(k)||0 }catch(e){ return 0 } }
+  function set(k){ try{ localStorage.setItem(k, Date.now()) }catch(e){} }
+  if(Date.now()-get(K) < 7*DAN || Date.now()-get('ss_cta') < 7*DAN) return;
+  document.addEventListener('click', function(e){ var a=e.target.closest&&e.target.closest('a[href*="poziv.html"]'); if(a) set('ss_cta'); });
+  var treba=+p.dataset.sekunde||45, vidljivo=0, poslednji=null;
+  function skrolovao(){ var h=document.documentElement.scrollHeight-innerHeight; return h<=0 || scrollY >= h/3; }
+  function zauzet(){
+    var v=[].some.call(document.querySelectorAll('video'), function(x){ return !x.paused && !x.ended; });
+    var s=document.getElementById('svetlo'); return v || (s && !s.hidden) || !!document.querySelector('.meni.otvoren');
+  }
+  var id=setInterval(function(){
+    if(document.visibilityState!=='visible') return;
+    vidljivo++;
+    if(vidljivo>=treba && skrolovao() && !zauzet()){ clearInterval(id); otvori(); }
+  },1000);
+  function otvori(){ poslednji=document.activeElement; p.hidden=false; set(K); requestAnimationFrame(function(){ p.classList.add('vidljiv'); }); p.querySelector('.popup-cta').focus({preventScroll:true}); }
+  function zatvori(){ p.classList.remove('vidljiv'); setTimeout(function(){ p.hidden=true; }, 200); if(poslednji&&poslednji.focus) poslednji.focus({preventScroll:true}); }
+  p.querySelector('.popup-x').addEventListener('click', zatvori);
+  p.querySelector('.popup-ne').addEventListener('click', zatvori);
+  p.querySelector('.popup-cta').addEventListener('click', function(){ set('ss_cta'); zatvori(); });
+  p.addEventListener('click', function(e){ if(e.target===p) zatvori(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !p.hidden) zatvori(); });
+})();
 </script>
 </body>
 </html>

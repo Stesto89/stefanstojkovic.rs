@@ -449,3 +449,29 @@ p { margin: 0 0 1em; }
   .svetlo-okvir img { max-width: none; max-height: none; width: 1600px; }
 }
 .pravno .firma { background: var(--krem); border-radius: 12px; padding: 16px 20px; color: var(--tekst); line-height: 1.6; }
+
+/* Popup posle zadržavanja na stranici */
+.popup { position: fixed; inset: 0; z-index: 900; display: grid; place-items: center; padding: 24px; background: rgba(20,19,19,0); transition: background .2s ease; }
+.popup[hidden] { display: none; }
+.popup.vidljiv { background: rgba(20,19,19,.55); }
+.popup-kartica {
+  position: relative; width: 100%; max-width: 460px; background: var(--bela); color: var(--tekst);
+  border-radius: 18px; padding: 40px 32px 26px; box-shadow: 0 20px 60px rgba(0,0,0,.3); text-align: center;
+  transform: translateY(16px); opacity: 0; transition: transform .25s ease, opacity .25s ease;
+}
+.popup.vidljiv .popup-kartica { transform: none; opacity: 1; }
+.popup-kartica h2 { font-size: 1.6rem; line-height: 1.2; margin: 0 0 12px; }
+.popup-kartica p { color: var(--tekst-2); margin: 0 0 22px; }
+.popup-cta { width: 100%; justify-content: center; }
+.popup-ne { margin-top: 12px; background: none; border: 0; color: var(--tekst-2); font: inherit; font-size: .92rem; text-decoration: underline; cursor: pointer; padding: 6px; }
+.popup-x {
+  position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; border: 0;
+  background: var(--krem); color: var(--tekst); display: grid; place-items: center; cursor: pointer;
+}
+.popup-x svg { width: 18px; height: 18px; }
+.popup-x:hover, .popup-x:focus-visible { background: var(--narandzasta); color: var(--bela); outline: none; }
+@media (max-width: 640px) {
+  .popup { place-items: end stretch; padding: 0; }
+  .popup-kartica { max-width: none; border-radius: 20px 20px 0 0; padding: 56px 20px 22px; transform: translateY(100%); }
+}
+@media (prefers-reduced-motion: reduce) { .popup, .popup-kartica { transition: none; } }
