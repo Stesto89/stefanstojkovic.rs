@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moj lični operativni sistem · kako radim sa AI-jem · Stefan Stojković</title>
+<meta name="description" content="Kako organizujem sebe, tim i posao uz AI agente i automatizacije: od jutarnjeg rituala do oglasa, poziva i isporuke. Sa delovima koji još nastaju. PDF za preuzimanje.">
+<link rel="canonical" href="https://stefanstojkovic.rs/licni-operativni-sistem.html">
+<meta property="og:title" content="Moj lični operativni sistem · kako radim sa AI-jem · Stefan Stojković">
+<meta property="og:description" content="Kako organizujem sebe, tim i posao uz AI agente i automatizacije: od jutarnjeg rituala do oglasa, poziva i isporuke. Sa delovima koji još nastaju. PDF za preuzimanje.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stefanstojkovic.rs/licni-operativni-sistem.html">
+<meta property="og:image" content="https://stefanstojkovic.rs/img/stefan-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stil.css?v=1793813064">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C1B1B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' fill='%23D47040' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="zaglavlje">
+  <div class="kontejner">
+    <a class="logo" href="index.html">Stefan Stojković<span>.</span></a>
+    <button class="meni-dugme" aria-label="Otvori meni" aria-expanded="false" aria-controls="meni">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="meni" id="meni"><a href="rad-sa-mnom.html">Rad sa mnom</a><a href="rezultati.html">Rezultati</a><a href="o-meni.html">O meni</a><a href="videi.html">Videi</a><a href="alati.html">Besplatni alati</a><a class="dugme" href="poziv.html">Zakaži poziv</a></nav>
+  </div>
+</header>
+<main>
+<style>
+.los-status{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin:0 6px 10px 0;vertical-align:middle}
+.los-status.radi{background:#E7F3EC;color:#22704A}
+.los-status.gradi{background:#FBEDE5;color:#A4512B;border:1px dashed #D47040}
+.los-status.vrsta{background:var(--krem);color:var(--tekst-2)}
+.tamna .los-status.vrsta{background:var(--crna-3);color:var(--tekst-svetli)}
+.los-oznake{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.los-oznake .los-status{margin:0}
+.los-deo{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--naglasak)}
+.los-kartica h3{margin-top:2px}
+.los-kartica .lista{margin-top:10px}
+.los-tok{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:36px;counter-reset:tok}
+.los-tok div{background:var(--crna-2);border:1px solid var(--linija-tamna);border-radius:12px;padding:16px 14px;font-size:.92rem;color:var(--tekst-svetli);position:relative}
+.los-tok div b{display:block;color:#fff;font-size:1rem;margin-bottom:4px}
+.los-tok div::before{counter-increment:tok;content:counter(tok,decimal-leading-zero);display:block;color:var(--naglasak);font-weight:800;font-size:.8rem;margin-bottom:6px}
+@media (max-width:1000px){.los-tok{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.los-tok{grid-template-columns:1fr}}
+.los-preuzmi{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.los-legenda{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:.92rem;color:var(--tekst-2)}
+@page{size:A4;margin:12mm 0}
+@media print{
+  .los-deo{display:block;break-after:avoid}
+  .split{grid-template-columns:1fr 1fr!important}
+  .zaglavlje,.podnozje,.popup,.los-bez-stampe,.meni-dugme{display:none!important}
+  body{font-size:12.5px}
+  .sekcija{padding:28px 0!important}
+  .kartica,.korak,.los-tok div,.vremenska div{break-inside:avoid;box-shadow:none!important}
+  h2{break-after:avoid}
+  .sekcija.tamna,.los-tok div{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a[href]{text-decoration:none}
+}
+</style>
+
+<section class="hero hero-jednostavan">
+  <div class="kontejner">
+    <span class="nadnaslov">Lični operativni sistem · kako radim sa AI-jem</span>
+    <h1>Moj sistem koji radi <span class="akcenat">umesto mene.</span></h1>
+    <p class="uvod">Editoru za video sam plaćao 750 €. Danas tu stavku nemam: montažu, titlove i uspravne klipove radi AI, a ja odobravam. To je samo jedan deo sistema koji gradim godinama. Ovde je ceo, onakav kakav je danas, zajedno sa delovima koji još nastaju.</p>
+    <div class="dugmad los-bez-stampe">
+      <a class="dugme" href="stefan-licni-operativni-sistem.pdf" download>Preuzmi PDF</a>
+      <a class="dugme obrubljeno" href="#mapa">Kako se sve povezuje</a>
+    </div>
+    <div class="los-legenda"><span><span class="los-status radi">Radi</span>koristim svaki dan</span><span><span class="los-status gradi">U izgradnji</span>pravim ga sada</span></div>
+  </div>
+</section>
+
+<div class="cinjenice">
+  <div class="kontejner">
+    <div><b>750 € → 0 €</b>za montažu videa</div>
+    <div><b>18 delova</b>od jutarnjeg rituala do oglasa</div>
+    <div><b>Moj OK</b>pre svake objave, poruke i promene</div>
+    <div><b>Lokalno</b>snimci i podaci klijenata ne izlaze sa računara</div>
+  </div>
+</div>
+
+<section class="sekcija krem">
+  <div class="kontejner uzak">
+    <span class="nadnaslov">Pre alata</span>
+    <h2>Bez strukture, svaki novi AI alat je još jedan tab koji zatvoriš za nedelju dana.</h2>
+    <p class="uvod">Isto radim sa klijentima: prvo jasan tok posla, pa tek onda automatizacija. AI ne popravlja haos. Ubrzava ga.</p>
+    <p>Zato dokument kreće od rituala i ciljeva, a ne od agenata. Agenti dolaze tek kad postoji nešto što imaju da pojačaju.</p>
+  </div>
+</section>
+
+<!-- DEO 1 -->
+<section class="sekcija">
+  <div class="kontejner">
+    <span class="los-deo">Deo 1 · Ja i moj ritam</span>
+    <h2>Rituali, ciljevi i pažnja</h2>
+    <div class="mreza tri" style="margin-top:32px">
+      <div class="kartica los-kartica">
+        <div class="broj">01</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Ritual</span></div>
+        <h3>Dnevni, nedeljni i mesečni ritam</h3>
+        <ul class="lista">
+          <li><b>Svako jutro:</b> šta je prioritet, šta je ušlo od juče, šta se premešta. Zadatke biram po kriterijumima, ne po tome šta gori.</li>
+          <li><b>Jednom nedeljno:</b> prioriteti iz dugoročnih ciljeva, a na kraju nedelje pregled šta je urađeno, šta je klizilo i šta menjam.</li>
+          <li><b>Jednom mesečno:</b> gde sam sa ciljevima i šta radim sledećeg meseca. Ne da bih se kritikovao, nego da korigujem kurs.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">02</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span></div>
+        <h3>Ciljevi, inicijative, projekti</h3>
+        <ul class="lista">
+          <li>Svaki cilj je postavljen tako da znam kad je dostignut, a ne samo kad „ide dobro”.</li>
+          <li>Cilj → inicijative (smerovi) → projekti sa opsegom i rokom. U aplikaciji vidim status svakog.</li>
+          <li>Ideje beležim glasovnom porukom tokom dana. Bez kucanja i bez gubljenja misli.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">03</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span></div>
+        <h3>AI čita mejlove umesto mene</h3>
+        <ul class="lista">
+          <li>Agent čita sve što stigne i sam proceni šta traži moju pažnju.</li>
+          <li>Kad nešto jeste važno, dobijam kratku poruku na telefon: ko piše, šta traži i do kada.</li>
+          <li>Sve ostalo čeka moj termin za mejlove. Inbox mi više ne određuje dan.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">04</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span></div>
+        <h3>Alati po kontekstu</h3>
+        <ul class="lista">
+          <li>Svi alati na jednoj listi sa linkovima, grupisani po kontekstu: prodaja, isporuka, marketing, administracija.</li>
+          <li>Kad radim prodaju, ispred mene je samo ono što treba za prodaju.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">05</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span></div>
+        <h3>AI pamti moja pravila</h3>
+        <ul class="lista">
+          <li>Kad ispravim AI („ovo ne piši”, „ovaj video ne koristi”), ispravka se pamti kao pravilo.</li>
+          <li>Sledeći put kreće od tog pravila. Istu grešku ne ispravljam dva puta.</li>
+          <li>Pravila su zapisana, pa ih mogu pročitati i promeniti kad hoću.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">06</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span></div>
+        <h3>Klijenti na jednom mestu</h3>
+        <ul class="lista">
+          <li>Lista aktivnih klijenata sa statusom: gde su u saradnji, šta se isporučuje, kakav je feedback.</li>
+          <li>Zadovoljstvo pratim po konkretnim pokazateljima, ne po osećaju.</li>
+          <li>Svaki projekat ima zadatke, odgovorne i rokove koje vidimo i ja i tim.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEO 2 -->
+<section class="sekcija tamna">
+  <div class="kontejner">
+    <span class="los-deo">Deo 2 · Sadržaj i marketing</span>
+    <h2>Jedan snimak, cela nedelja sadržaja</h2>
+    <p class="uvod">Ovde je razlika od 750 €. Ranije je svaki klip čekao editora. Danas snimim, a AI montira, prilagođava format i predlaže gde šta ide. Moje je da odobrim.</p>
+    <div class="mreza dve" style="margin-top:32px">
+      <div class="kartica los-kartica">
+        <div class="broj">07</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span></div>
+        <h3>Montaža videa kroz razgovor</h3>
+        <ul class="lista">
+          <li>Ubacim sirove snimke i kažem šta hoću. AI napravi transkript sa vremenom svake reči i predloži plan montaže.</li>
+          <li>Posle mog OK-a izbacuje poštapalice („ovaj”, „znači”), lažne početke i tišine, bira najbolji kadar i sređuje boju i zvuk.</li>
+          <li>Horizontalni snimak pretvara u uspravni, a kadar prati onoga ko priča, i kad su u razgovoru dve ili četiri osobe.</li>
+          <li>Dodaje titlove, animirane brojke i grafiku preko snimka. Svaki rez proveri da ne seče reč.</li>
+          <li>Sve radi na mom računaru. Snimci ne idu ni na jedan spoljni servis.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">08</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span></div>
+        <h3>Režija i izbor najboljih momenata</h3>
+        <ul class="lista">
+          <li>Iz dugog videa (podkast, radionica, predavanje) AI izdvaja momente koji mogu da stoje sami kao kratak klip.</li>
+          <li>Za svaki pravi režijski list: gde ide napetost, gde tišina, gde zum, muzika ili titl.</li>
+          <li>AI može i da „gleda” video: kaže šta se vidi i čuje u kojoj sekundi i gde gledalac odustaje.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">09</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span></div>
+        <h3>AI strateg sadržaja</h3>
+        <ul class="lista">
+          <li>Svaka nedelja ima jednu temu. Sve objave na svim mrežama govore o njoj, iz pet uglova: o meni, o klijentu, rezultat, metoda, mit.</li>
+          <li>Svaka mreža dobija svoju verziju, ne kopiju. LinkedIn duže, Instagram kraće, newsletter dublje.</li>
+          <li>Pre nego što mi pokaže tekst, AI sam proveri da li zvuči kao ja i da li govori vlasniku firme kroz njegov problem.</li>
+          <li>Svaka objava ima jedan poziv na akciju koji kaže šta čovek dobija.</li>
+          <li>Zakazuje se jednom nedeljno, u prazne termine. Ono što je već zakazano ne dira.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">10</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Automatizacija</span></div>
+        <h3>Repurposing i lead magneti</h3>
+        <ul class="lista">
+          <li>Jedan video postaje blog, LinkedIn post, kratki klip i grafika sa citatom.</li>
+          <li>Na Instagramu komentar sa ključnom reči automatski šalje materijal. Ništa ne prosleđujem ručno.</li>
+          <li>Vidim ko je kliknuo, ko je preuzeo materijal i ko pokazuje veliko interesovanje.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">11</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status gradi">Deo u izgradnji</span><span class="los-status vrsta">Agent</span></div>
+        <h3>Agent za plaćene oglase</h3>
+        <ul class="lista">
+          <li>Svaki oglas ocenjuje po onome što stvarno vredi: po ceni prijave, pojavljenog na pozivu i prodaje, a ne samo po ceni leada.</li>
+          <li>Gleda prve tri sekunde svakog videa i poredi sa prosekom naloga. Primer predloga: „hook zadržava 18 %, prosek je 31 %, probaj početak iz 0:42 drugog snimka”.</li>
+          <li>Posle mog OK-a pravi novu kreativu i postavlja je kao pauziran oglas pored starog. Pali ga tek na moj drugi OK.</li>
+          <li>Vodi banku hookova: 54 testirana video oglasa sa brojkama, pa nov oglas kreće od dokazanog.</li>
+          <li><b>U izgradnji:</b> nedeljni predlog tri najvažnije promene za oglase, koje ja samo odobrim.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">12</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span><span class="los-status vrsta">Bot</span></div>
+        <h3>Tržište, konkurencija i LinkedIn</h3>
+        <ul class="lista">
+          <li><b>Istraživanje tržišta:</b> agent prati Reddit i druge kanale i javlja šta ciljnu publiku boli ove nedelje. Pregled dobijem bez otvaranja Reddita.</li>
+          <li><b>Konkurencija:</b> prati njihove postove i javlja mi samo kad nešto zaista ima odjek kod mojih idealnih klijenata.</li>
+          <li><b>Kvalifikacija:</b> ljudi koji reaguju na moje postove prolaze kroz unapred zadate kriterijume, a skor ih rangira po aktivnosti.</li>
+          <li><b>Outreach:</b> kvalifikovan kontakt dobija uvodnu poruku i sekvencu do zakazivanja. Poziv mi se pojavi u kalendaru već zakazan.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija narandzasta los-bez-stampe">
+  <div class="kontejner centar">
+    <h2>Prepoznaješ svoj haos u ovome?</h2>
+    <p class="uvod">Za 30 minuta vidimo šta bi kod tebe prvo trebalo da radi bez tebe.</p>
+    <div class="dugmad"><a class="dugme" href="poziv.html">Zakaži poziv</a></div>
+  </div>
+</section>
+
+<!-- DEO 3 -->
+<section class="sekcija">
+  <div class="kontejner">
+    <span class="los-deo">Deo 3 · Prodaja</span>
+    <h2>U poziv ulazim sa kontekstom, ne od nule</h2>
+    <div class="mreza dve" style="margin-top:32px">
+      <div class="kartica los-kartica">
+        <div class="broj">13</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Bot</span></div>
+        <h3>Pre poziva: potvrde, podsetnici, upitnik</h3>
+        <ul class="lista">
+          <li>Čim neko zakaže, dobija potvrdu sa vremenom, linkom i šta da pripremi.</li>
+          <li>Podsetnik ide 24 sata pre poziva, pa još jedan 2 sata pre.</li>
+          <li>Odmah dobija i upitnik: gde je biznis, koji problem rešava, šta je već probao. Ako ga ne popuni do 24 sata pre poziva, stiže mu podsetnik.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">14</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span></div>
+        <h3>Brifing pre poziva</h3>
+        <ul class="lista">
+          <li>AI spoji odgovore iz upitnika i sve što je dostupno o firmi u jedan brifing: kontekst, moguće bolne tačke, pitanja koja treba postaviti.</li>
+          <li>Pre novog klijenta dobijam i grubu procenu obima posla i skriptu razgovora od 15 do 20 minuta.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">15</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status gradi">Deo u izgradnji</span><span class="los-status vrsta">Agent</span></div>
+        <h3>Posle poziva: analiza, ponuda, sledeći korak</h3>
+        <ul class="lista">
+          <li>AI čita transkript i izdvaja šta je klijent rekao izričito, a šta između redova.</li>
+          <li>Predlaže koja ponuda i paket mu odgovaraju i zašto. Zadaci za tim idu automatski na WhatsApp.</li>
+          <li><b>U izgradnji:</b> poziv se snima i prepisuje lokalno, a izveštaj (odakle je došao, problem, budžet, prepreke, šta je obećano, sledeći korak) sam ide u CRM kao beleška, sa zadatkom za follow-up.</li>
+          <li><b>U izgradnji:</b> rečenice i prigovori sa poziva vraćaju se agentu za oglase kao materijal za nove hookove. Oglas onda govori jezikom pravih klijenata.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">16</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Automatizacija</span></div>
+        <h3>Newsletter sekvenca po lead magnetu</h3>
+        <ul class="lista">
+          <li>Ko skine materijal o haosu u isporuci, dobija sekvencu o toku posla. Ko skine materijal o ličnoj produktivnosti, dobija drugu.</li>
+          <li>Ritam: prvi mejl odmah, drugi posle 2 dana, treći posle 5 dana. Na kraju jedan jasan sledeći korak.</li>
+          <li>Pored toga, jedan newsletter nedeljno, utorkom u 10, o temi te nedelje.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEO 4 -->
+<section class="sekcija krem">
+  <div class="kontejner">
+    <span class="los-deo">Deo 4 · Isporuka i klijenti</span>
+    <h2>Isporuka ne sme da zavisi od toga ko je danas dostupan</h2>
+    <div class="mreza dve" style="margin-top:32px">
+      <div class="kartica los-kartica istaknuta">
+        <span class="etiketa">Srce mog posla</span>
+        <div class="broj">17</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span></div>
+        <h3>Moja metodologija, pretočena u AI</h3>
+        <ul class="lista">
+          <li>Iz transkripta razgovora i podataka klijenta AI popuni početnu analizu. Šta fali, napiše kao listu pitanja za vlasnika. Brojke ne izmišlja.</li>
+          <li>Odredi u kojoj je fazi rasta biznis i koja je ključna kočnica te faze.</li>
+          <li>Napravi listu bolova sa tačnim mestom u biznisu i mapu ciljeva u bojama: zeleno, žuto, crveno, a sivo gde se ciljevi sudaraju.</li>
+          <li>Pomaže da se izabere jedno ograničenje i najviše tri aktivne akcije. Uz njih ide i spisak onoga što se sada ne radi.</li>
+          <li>Svaku akciju razradi do kraja: koraci, ko je odgovoran, kako znamo da je gotova, šta može da krene po zlu, ko će se opirati.</li>
+          <li>Posle radionice izveštaj ide direktno na digitalnu tablu. Nedeljni pregled, provera posle 30 i posle 90 dana.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">18</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span></div>
+        <h3>Delivery sa timom</h3>
+        <ul class="lista">
+          <li>Svaki projekat ima tok od ideje do isporuke: faze, odgovorne i definiciju gotovog.</li>
+          <li>Zadatke kreiram glasovnom porukom, a tim ih odmah dobija na WhatsApp. Bez mejla i bez prekidanja fokusa.</li>
+          <li>Sadržaj ima ceo tok: od ideje do gotovog videa, posta i rasporeda.</li>
+        </ul>
+        <h3 style="margin-top:26px">Kurs bez ijednog ručnog koraka</h3>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Automatizacija</span></div>
+        <ul class="lista">
+          <li>Uplata pokreće ceo lanac: potvrda, mejl sa pristupom, grupa prema paketu, a u CRM-u lead postaje polaznik i prestaje da dobija prodajne mejlove.</li>
+          <li>Vidim ko je počeo, a ko je zaostao. Ko zaostane, dobija podsetnik ili pitanje da li mu treba pomoć.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">+</div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span><span class="los-status vrsta">Agent</span></div>
+        <h3>Prezentacije, landing strane, sajt</h3>
+        <ul class="lista">
+          <li>Iz transkripta i brifinga AI pravi strukturu i sadržaj prezentacije: problem, uvid, rešenje, sledeći koraci.</li>
+          <li>Za svaku novu ponudu pravi landing stranu i tekst, bez copywritera za svaku novu ponudu.</li>
+          <li>Ovaj sajt, scenario prodajnog videa i upitnik o fazi biznisa napravljeni su isto: AI pravi, ja uređujem i odobravam.</li>
+        </ul>
+      </div>
+      <div class="kartica los-kartica">
+        <div class="broj">+</div>
+        <div class="los-oznake"><span class="los-status gradi">U izgradnji</span></div>
+        <h3>Softver za vlasnike</h3>
+        <ul class="lista">
+          <li>Jedan model biznisa u brojevima: novac, ljudi, kapacitet, prodaja, vreme vlasnika.</li>
+          <li>Svaka promena odmah pokazuje posledice i gde puca prvo. Uz to kaže fazu, jedno ograničenje i tri akcije za sada.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEO 5 -->
+<section class="sekcija">
+  <div class="kontejner">
+    <span class="los-deo">Deo 5 · Merenje</span>
+    <h2>Od oglasa do prodaje, u jednoj tabeli</h2>
+    <div class="split" style="margin-top:24px;align-items:start">
+      <div>
+        <div class="los-oznake"><span class="los-status radi">Radi</span></div>
+        <ul class="lista">
+          <li>Pratim izvor svakog novog klijenta: kanal, sadržaj koji je video i lead magnet koji je skinuo.</li>
+          <li>Vidim koji postovi, videi i materijali dovode najviše kvalifikovanih ljudi.</li>
+          <li>Konverzija po kanalu: ko klikne, ko ostavi kontakt, ko zakaže, ko postane klijent.</li>
+          <li>Skor pokazuje ko ima najviše interakcija i ko je najbliže odluci.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="los-oznake"><span class="los-status gradi">U izgradnji</span></div>
+        <ul class="lista">
+          <li>Svaki lead nosi trag do tačnog oglasa, pa vidim cenu po prodaji po kampanji, a ne samo cenu po leadu.</li>
+          <li>Svake noći sistem sam skupi rezultate oglasa, kontakte, termine, pojavljivanja i prodaje u jednu tabelu.</li>
+          <li>Ponedeljkom ujutru kratak izveštaj na mejl.</li>
+          <li>Privatna stranica sa živim levkom: potrošeno → leadovi → zakazani → pojavili se → kupili → prihod.</li>
+          <li>Podsetnici koji smanjuju broj onih koji ne dođu na poziv, uz merenje da li zaista rade.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="sekcija tamna" id="mapa">
+  <div class="kontejner">
+    <span class="nadnaslov">Kako se sve povezuje</span>
+    <h2>Krug koji se sam hrani</h2>
+    <p class="uvod">Delovi ne rade odvojeno. Ono što kupac kaže na pozivu vraća se u sadržaj i oglase.</p>
+    <div class="los-tok">
+      <div><b>Snimak</b>jedan dugi video ili razgovor</div>
+      <div><b>Sadržaj</b>klipovi i objave za celu nedelju</div>
+      <div><b>Lead magnet</b>komentar sa ključnom reči ili upitnik</div>
+      <div><b>Sekvenca</b>mejlovi prema onome što je skinuo</div>
+      <div><b>Poziv</b>brifing pre, analiza posle</div>
+      <div><b>CRM</b>beleška, faza, sledeći korak</div>
+      <div><b>Oglasi</b>novi hookovi iz reči kupaca, pa nazad u sadržaj</div>
+    </div>
+  </div>
+</section>
+
+<!-- NEDELJA -->
+<section class="sekcija krem">
+  <div class="kontejner uzak">
+    <span class="nadnaslov">U praksi</span>
+    <h2>Jedna nedelja u mom sistemu</h2>
+    <div class="vremenska" style="margin-top:28px">
+      <div><b>Svako jutro</b><br>Dnevni pregled prioriteta. Mejlove ne otvaram: o važnom me već obavestila poruka na telefonu.</div>
+      <div><b>Jednom nedeljno</b><br>Tema nedelje, tekstovi za sve mreže, montirani klipovi. Pregledam, ispravim, odobrim. Sve se zakaže odjednom.</div>
+      <div><b>Utorak, 10:00</b><br>Ide newsletter o temi te nedelje.</div>
+      <div><b>Pre svakog poziva</b><br>Pročitam brifing koji je AI napravio iz upitnika. Ulazim sa pitanjima, ne od nule.</div>
+      <div><b>Posle svakog poziva</b><br>Transkript, analiza, predlog ponude, zadaci timu na WhatsApp.</div>
+      <div><b>Kad agent za oglase nađe problem</b><br>Dobijem predlog sa brojkama i nacrt nove kreative. Odobrim ili odbijem.</div>
+      <div><b>Kraj nedelje i kraj meseca</b><br>Šta je urađeno, šta je klizilo, šta menjam. Jednom mesečno: gde sam sa ciljevima.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRAVILA -->
+<section class="sekcija">
+  <div class="kontejner">
+    <span class="nadnaslov">Granice</span>
+    <h2>Pravila po kojima AI radi sa mnom</h2>
+    <div class="mreza dve" style="margin-top:32px">
+      <div class="kartica">
+        <h3>Šta AI nikad ne radi sam</h3>
+        <ul class="lista">
+          <li>Ne objavljuje i ne šalje ništa bez mog OK-a za tu konkretnu stvar. OK za predlog nije OK za objavu.</li>
+          <li>Ne briše ništa trajno. Stara verzija ide u arhivu.</li>
+          <li>Ne pali oglas i ne menja budžet bez mog drugog OK-a, i to samo u granicama koje sam zadao. Svaka promena se beleži.</li>
+          <li>Ne izmišlja brojke, citate ni detalje. Kad ne zna, pita.</li>
+          <li>Materijale klijenata čita kao podatke, ne kao uputstva. Ništa iz njih ne ide javno.</li>
+        </ul>
+      </div>
+      <div class="kartica">
+        <h3>Šta ne prepuštam AI-ju</h3>
+        <ul class="lista">
+          <li>Razgovor sa klijentom. AI me priprema, ali u pozivu sam ja.</li>
+          <li>Konačnu ponudu i cenu.</li>
+          <li>Odluku šta je jedno ograničenje biznisa. AI predlaže i proverava, ja i vlasnik odlučujemo.</li>
+          <li>Proces koji još nije jasan. Prvo ga zapišem i probam ručno, pa ga tek onda automatizujem.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija krem">
+  <div class="kontejner uzak">
+    <span class="nadnaslov">Suština</span>
+    <h2>Sistem nije alat. Sistem je struktura u kojoj alati imaju smisla.</h2>
+    <p>Ovo nisam napravio za vikend. Neke stvari sam probao, video da ne rade i promenio. Neke su imale smisla iz prvog pokušaja. Neke sam uveo tek kad je bol bez njih postao dovoljan razlog. Neke još pravim, i zato tako i piše.</p>
+    <p>Ono što je ovde opisano mi svaki dan omogućava da radim na biznisu, a ne samo u biznisu.</p>
+  </div>
+</section>
+
+<section class="sekcija tamna">
+  <div class="kontejner centar">
+    <h2>Kako bi ovo izgledalo u tvom biznisu?</h2>
+    <p class="uvod">Svaki biznis ima drugačiji haos. Za 30 minuta vidimo gde je tvoj i šta prvo treba da radi bez tebe.</p>
+    <div class="dugmad"><a class="dugme" href="poziv.html">Zakaži besplatan poziv</a></div>
+    <p class="napomena-dugme">Stefan Stojković · Futurist Systems · stefanstojkovic.rs · stef@futurist.coach</p>
+  </div>
+</section>
+
+</main>
+<footer class="podnozje">
+  <div class="kontejner">
+    <div class="kolone">
+      <div>
+        <a class="logo" href="index.html" style="color:#fff">Stefan Stojković<span>.</span></a>
+        <p style="margin-top:14px">Pomažem vlasnicima digitalnih uslužnih biznisa da prime više klijenata bez proporcionalnog povećanja tima i da izađu iz operative.</p>
+      </div>
+      <div>
+        <h4>Saradnja</h4>
+        <ul>
+          <li><a href="mapa-uskih-grla.html">Mapa uskih grla</a></li>
+          <li><a href="operativni-sistem-rasta.html">Operativni sistem rasta</a></li>
+          <li><a href="rad-sa-mnom.html">Rad sa mnom</a></li>
+          <li><a href="poziv.html">Zakaži poziv</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Besplatno</h4>
+        <ul>
+          <li><a href="faza.html">U kojoj je fazi tvoj biznis?</a></li>
+          <li><a href="studija-slucaja.html">Studija slučaja</a></li>
+          <li><a href="https://sistem.stefanstojkovic.rs/kalkulator-page" target="_blank" rel="noopener">Kalkulator čekanja</a></li>
+          <li><a href="alati.html">Svi besplatni alati</a></li>
+          <li><a href="videi.html">Videi na srpskom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Prati me</h4>
+        <ul><li><a href="https://www.youtube.com/@biz.systems" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/biznis.sistemi/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/in/stefanstojkovic" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="mailto:stef@futurist.coach">stef@futurist.coach</a></li></ul>
+      </div>
+    </div>
+    <div class="dno">
+      <span>© 2026 Stefan Stojković · Futurist Systems</span>
+      <span><a href="privatnost.html">Politika privatnosti</a> · <a href="uslovi.html">Uslovi korišćenja</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var d=document.querySelector('.meni-dugme'),m=document.getElementById('meni');
+if(!d||!m)return;d.addEventListener('click',function(){var o=m.classList.toggle('otvoren');d.setAttribute('aria-expanded',o)});})();
+</script>
+
+</body>
+</html>
