@@ -64,17 +64,8 @@
     <div>
       <h2>Želiš ovo za svoj biznis?</h2>
       <p>Ako ti se u snimku učinilo da gledaš svoju firmu, sledeći korak je razgovor od 30 minuta. Pogledamo gde si i da li ima smisla da radimo zajedno.</p>
-      <div class="dugmad"><a class="dugme" href="poziv.html">Zakaži poziv</a><a class="dugme obrubljeno" href="https://sistem.stefanstojkovic.rs/faza-biznisa" target="_blank" rel="noopener">Prvo uradi upitnik</a></div>
+      <div class="dugmad"><a class="dugme" href="poziv.html">Zakaži poziv</a></div>
     </div>
-  </div>
-</section>
-
-<section class="sekcija">
-  <div class="kontejner uzak">
-    <span class="nadnaslov">Newsletter utorkom</span>
-    <h2>Jedna tema nedeljno o tome kako firma raste bez haosa</h2>
-    <p class="uvod">Kratko i praktično: šta sam video kod klijenata te nedelje, jedan alat i jedan korak koji možeš odmah da probaš.</p>
-    <div style="margin-top:24px"><iframe src="https://api.leadconnectorhq.com/widget/form/A31eRVKWnbItWeYs455W" style="width:100%;height:100%;border:none;border-radius:4px;min-height:460px" id="inline-A31eRVKWnbItWeYs455W" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-id="A31eRVKWnbItWeYs455W" title="Prijava na newsletter"></iframe><script src="https://api.leadconnectorhq.com/js/form_embed.js"></script></div>
   </div>
 </section>
 
@@ -137,11 +128,15 @@ if(!d||!m)return;d.addEventListener('click',function(){var o=m.classList.toggle(
   function set(k){ try{ localStorage.setItem(k, Date.now()) }catch(e){} }
   if(Date.now()-get(K) < 7*DAN || Date.now()-get('ss_cta') < 7*DAN) return;
   document.addEventListener('click', function(e){ var a=e.target.closest&&e.target.closest('a[href*="poziv.html"]'); if(a) set('ss_cta'); });
-  var treba=+p.dataset.sekunde||45, vidljivo=0, poslednji=null;
-  function skrolovao(){ var h=document.documentElement.scrollHeight-innerHeight; return h<=0 || scrollY >= h/3; }
+  var treba=+p.dataset.sekunde||45, vidljivo=0, poslednji=null, kraj=!!p.dataset.kraj, kliknuo=false, gledao=false;
+  document.addEventListener('click', function(e){ if(e.target.closest && e.target.closest('main a.dugme')) kliknuo=true; });
+  addEventListener('blur', function(){ setTimeout(function(){ var a=document.activeElement; if(a && a.tagName==='IFRAME' && /youtube/.test(a.src||'')) gledao=true; }, 0); });
+  var sp=p.dataset.sakrijPosle && document.getElementById(p.dataset.sakrijPosle), videoPonude=false;
+  if(sp && 'IntersectionObserver' in window){ new IntersectionObserver(function(en){ if(en[0].isIntersecting) videoPonude=true; }).observe(sp); }
+  function skrolovao(){ var h=document.documentElement.scrollHeight-innerHeight; return h<=0 || scrollY >= (kraj ? h*0.92 : h/3); }
   function zauzet(){
     var v=[].some.call(document.querySelectorAll('video'), function(x){ return !x.paused && !x.ended; });
-    var s=document.getElementById('svetlo'); return v || (s && !s.hidden) || !!document.querySelector('.meni.otvoren');
+    var s=document.getElementById('svetlo'); return v || gledao || (kraj && kliknuo) || videoPonude || (s && !s.hidden) || !!document.querySelector('.meni.otvoren');
   }
   var id=setInterval(function(){
     if(document.visibilityState!=='visible') return;

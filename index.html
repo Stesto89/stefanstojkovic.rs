@@ -123,7 +123,7 @@
   </div>
 </section>
 
-<section class="sekcija krem">
+<section class="sekcija krem" id="ponude">
   <div class="kontejner">
     <div class="centar">
       <span class="nadnaslov">Kako možemo da radimo zajedno</span>
@@ -294,7 +294,7 @@
     </div>
   </div>
 </footer>
-<div class="popup" id="popup" data-sekunde="40" role="dialog" aria-modal="true" aria-labelledby="popup-naslov" hidden>
+<div class="popup" id="popup" data-sekunde="40" data-sakrij-posle="ponude" role="dialog" aria-modal="true" aria-labelledby="popup-naslov" hidden>
   <div class="popup-kartica">
     <button class="popup-x" type="button" aria-label="Zatvori"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <h2 id="popup-naslov">Ne znaš odakle da kreneš?</h2>
@@ -315,11 +315,15 @@ if(!d||!m)return;d.addEventListener('click',function(){var o=m.classList.toggle(
   function set(k){ try{ localStorage.setItem(k, Date.now()) }catch(e){} }
   if(Date.now()-get(K) < 7*DAN || Date.now()-get('ss_cta') < 7*DAN) return;
   document.addEventListener('click', function(e){ var a=e.target.closest&&e.target.closest('a[href*="poziv.html"]'); if(a) set('ss_cta'); });
-  var treba=+p.dataset.sekunde||45, vidljivo=0, poslednji=null;
-  function skrolovao(){ var h=document.documentElement.scrollHeight-innerHeight; return h<=0 || scrollY >= h/3; }
+  var treba=+p.dataset.sekunde||45, vidljivo=0, poslednji=null, kraj=!!p.dataset.kraj, kliknuo=false, gledao=false;
+  document.addEventListener('click', function(e){ if(e.target.closest && e.target.closest('main a.dugme')) kliknuo=true; });
+  addEventListener('blur', function(){ setTimeout(function(){ var a=document.activeElement; if(a && a.tagName==='IFRAME' && /youtube/.test(a.src||'')) gledao=true; }, 0); });
+  var sp=p.dataset.sakrijPosle && document.getElementById(p.dataset.sakrijPosle), videoPonude=false;
+  if(sp && 'IntersectionObserver' in window){ new IntersectionObserver(function(en){ if(en[0].isIntersecting) videoPonude=true; }).observe(sp); }
+  function skrolovao(){ var h=document.documentElement.scrollHeight-innerHeight; return h<=0 || scrollY >= (kraj ? h*0.92 : h/3); }
   function zauzet(){
     var v=[].some.call(document.querySelectorAll('video'), function(x){ return !x.paused && !x.ended; });
-    var s=document.getElementById('svetlo'); return v || (s && !s.hidden) || !!document.querySelector('.meni.otvoren');
+    var s=document.getElementById('svetlo'); return v || gledao || (kraj && kliknuo) || videoPonude || (s && !s.hidden) || !!document.querySelector('.meni.otvoren');
   }
   var id=setInterval(function(){
     if(document.visibilityState!=='visible') return;
