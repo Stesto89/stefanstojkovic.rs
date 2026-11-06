@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moj lični operativni sistem · kako radim sa AI-jem · Stefan Stojković</title>
-<meta name="description" content="Kako organizujem sebe, tim i posao uz AI agente i automatizacije: od jutarnjeg rituala do oglasa, poziva i isporuke. Sa delovima koji još nastaju. PDF za preuzimanje.">
+<meta name="description" content="Kako uz AI agente i automatizacije štedim 2.250 € i oko 108 sati mesečno: od mejlova i objava do oglasa, poziva i isporuke. PDF za preuzimanje.">
 <link rel="canonical" href="https://stefanstojkovic.rs/licni-operativni-sistem.html">
 <meta property="og:title" content="Moj lični operativni sistem · kako radim sa AI-jem · Stefan Stojković">
-<meta property="og:description" content="Kako organizujem sebe, tim i posao uz AI agente i automatizacije: od jutarnjeg rituala do oglasa, poziva i isporuke. Sa delovima koji još nastaju. PDF za preuzimanje.">
+<meta property="og:description" content="Kako uz AI agente i automatizacije štedim 2.250 € i oko 108 sati mesečno: od mejlova i objava do oglasa, poziva i isporuke. PDF za preuzimanje.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://stefanstojkovic.rs/licni-operativni-sistem.html">
 <meta property="og:image" content="https://stefanstojkovic.rs/img/stefan-hero.jpg">
@@ -46,6 +46,54 @@
 @media (max-width:520px){.los-tok{grid-template-columns:1fr}}
 .los-preuzmi{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 .los-legenda{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:.92rem;color:var(--tekst-2)}
+.los-hero-brojke{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 8px;max-width:820px}
+.los-hero-brojke div{background:var(--crna-2);border:1px solid var(--linija-tamna);border-radius:14px;padding:18px 20px}
+.los-hero-brojke strong{display:block;font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;color:var(--naglasak);line-height:1.05;letter-spacing:-.02em}
+.los-hero-brojke span{display:block;margin-top:6px;color:var(--tekst-svetli);font-size:.95rem;line-height:1.35}
+@media (max-width:640px){.los-hero-brojke{grid-template-columns:1fr}}
+.los-kartica{position:relative}
+.los-kartica .los-usteda{position:absolute;top:26px;right:24px;margin:0}
+.los-usteda{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;font-size:.78rem;font-weight:800;color:var(--naglasak);background:rgba(227,107,47,.09);border:1px solid rgba(227,107,47,.45);border-radius:999px;padding:4px 11px 4px 8px;margin:0 0 10px;width:max-content;max-width:100%}
+.los-usteda svg{width:15px;height:15px;flex:none}
+.tamna .los-usteda{background:rgba(227,107,47,.14)}
+.los-novac{margin-top:26px;display:grid;gap:12px;max-width:900px}
+.los-novac-red{display:grid;grid-template-columns:200px 1fr 150px;gap:16px;align-items:center}
+.los-novac-red .ime{font-weight:700}
+.los-novac-red .los-traka{height:30px;background:var(--krem);border-radius:8px;overflow:hidden}
+.los-novac-red .los-traka i{display:block;height:100%;border-radius:8px;background:repeating-linear-gradient(135deg,#D47040 0 8px,#E8A27E 8px 16px);opacity:.85;position:relative}
+.los-novac-red .iznos{font-weight:800;font-size:1.05rem;white-space:nowrap}
+.los-novac-red .iznos s{color:var(--tekst-2);font-weight:600}
+.los-novac-red .iznos b{color:var(--zelena)}
+.los-novac-ukupno{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:2px solid var(--crna);padding-top:12px;margin-top:4px;font-weight:700}
+.los-novac-ukupno b{color:var(--naglasak);font-size:1.15rem}
+.los-graf-naslov{margin-top:44px}
+.los-graf-legenda{display:flex;gap:18px;font-size:.88rem;color:var(--tekst-2);margin-bottom:12px}
+.los-graf-legenda i{display:inline-block;width:14px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.los-graf-legenda i.ranije,.los-graf .ranije{background:#DCD5CB}
+.los-graf-legenda i.sada,.los-graf .sada{background:var(--narandzasta)}
+.los-graf{display:grid;gap:8px}
+.los-graf-red{display:grid;grid-template-columns:270px 1fr 100px 62px;gap:14px;align-items:center;font-size:.95rem}
+.los-graf-red .los-traka{position:relative;height:16px}
+.los-graf-red .los-traka i{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.los-graf-red .br{color:var(--tekst-2);white-space:nowrap;font-size:.9rem}
+.los-graf-red b{color:var(--naglasak);text-align:right;white-space:nowrap}
+.los-graf-red.ukupno{border-top:2px solid var(--crna);padding-top:10px;margin-top:4px;font-weight:800}
+.los-graf-red.ukupno .br{color:var(--tekst);font-weight:800}
+.los-graf-red.ukupno b{font-size:1.15rem}
+.los-napomena{font-size:.88rem;color:var(--tekst-2);margin-top:16px}
+@media (max-width:760px){
+  .los-novac-red{grid-template-columns:1fr auto;gap:6px 12px}
+  .los-novac-red .los-traka{grid-column:1/-1;grid-row:2}
+  .los-graf-red{grid-template-columns:1fr auto auto;gap:4px 10px}
+  .los-graf-red .ime{grid-column:1/-1}
+  .los-graf-red .los-traka{grid-column:1/2}
+}
+.los-krug-wrap{display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:48px;align-items:center;margin-top:36px}
+.los-krug{width:100%;height:auto;display:block}
+.los-krug-lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.los-krug-lista li{color:var(--tekst-svetli);border-left:3px solid var(--narandzasta);padding:2px 0 2px 14px;line-height:1.4}
+.los-krug-lista li b{display:block;color:#fff}
+@media (max-width:900px){.los-krug-wrap{grid-template-columns:1fr;gap:28px}.los-krug{max-width:460px;margin:0 auto}}
 .los-strana{display:contents}
 .los-nastavak{padding-top:0;margin-top:-2px}
 .los-pre-nastavka{padding-bottom:24px}
@@ -89,6 +137,28 @@
   .los-legenda{font-size:13px}
   .sekcija p{font-size:14.5px}
   .centar .dugmad{justify-content:center}
+  .los-hero-brojke{grid-template-columns:repeat(3,1fr)!important;margin-top:9mm!important;max-width:none}
+  .los-hero-brojke div{padding:6mm!important}
+  .los-hero-brojke strong{font-size:36px!important}
+  .los-hero-brojke span{font-size:13px!important}
+  .los-usteda{font-size:10.5px!important;padding:3px 9px 3px 7px!important;margin-bottom:6px!important}
+  .los-kartica .los-usteda{top:5mm!important;right:5mm!important;margin:0!important}
+  .lista li{font-size:13px!important;line-height:1.42!important;margin-bottom:5px!important}
+  .tamna .lista li{font-size:12.5px!important}
+  .vremenska div{font-size:13px!important;margin-bottom:3px!important}
+  #mapa{padding-bottom:6mm!important}
+  .los-novac{margin-top:6mm!important;gap:3mm!important}
+  .los-novac-red{grid-template-columns:52mm 1fr 38mm!important}
+  .los-graf-naslov{margin-top:10mm!important}
+  .los-graf{gap:2.4mm!important}
+  .los-graf-red{grid-template-columns:66mm 1fr 24mm 15mm!important;font-size:13px!important}
+  .los-graf-red .los-traka{height:13px}
+  .los-graf-red .ime,.los-graf-red .los-traka,.los-novac-red .los-traka{grid-column:auto!important;grid-row:auto!important}
+  .los-novac-red .los-traka{height:24px!important}
+  .los-napomena{font-size:12px!important}
+  .los-krug-wrap{grid-template-columns:88mm 1fr!important;gap:8mm!important;margin-top:4mm!important}
+  .los-krug-lista{gap:2.4mm!important}
+  .los-krug-lista li{font-size:12.5px}
   a[href]{text-decoration:none}
 }
 </style>
@@ -98,7 +168,12 @@
   <div class="kontejner">
     <span class="nadnaslov">Lični operativni sistem · kako radim sa AI-jem</span>
     <h1>Moj sistem koji radi <span class="akcenat">umesto mene.</span></h1>
-    <p class="uvod">Editoru za video sam plaćao 750 € mesečno. Danas tu stavku nemam: montažu, titlove i uspravne klipove radi AI, a ja odobravam. To je samo jedan deo sistema koji gradim godinama. Ovde je ceo, onakav kakav je danas, zajedno sa delovima koji još nastaju.</p>
+    <p class="uvod">Editoru za video sam plaćao 750 € mesečno, a jednom čoveku u isporuci 1.500 €. Danas te dve stavke nemam. Uz to mi sistem vraća oko 108 sati mesečno na mejlovima, objavama, newsletteru, izveštajima i pripremi poziva. Ovde je ceo sistem, onakav kakav je danas, zajedno sa delovima koji još nastaju.</p>
+    <div class="los-hero-brojke">
+      <div><strong>2.250 €</strong><span>mesečno manje troškova</span></div>
+      <div><strong>~108 h</strong><span>mesečno mog vremena</span></div>
+      <div><strong>1 čovek</strong><span>manje u isporuci</span></div>
+    </div>
     <div class="dugmad los-bez-stampe">
       <a class="dugme" href="stefan-licni-operativni-sistem.pdf" download>Preuzmi PDF</a>
       <a class="dugme obrubljeno" href="#mapa">Kako se sve povezuje</a>
@@ -108,7 +183,7 @@
 
 <div class="cinjenice">
   <div class="kontejner">
-    <div><b>750 € → 0 €</b>mesečno za montažu videa</div>
+    <div><b>27.000 €</b>godišnje manje troškova</div>
     <div><b>18 delova</b>od jutarnjeg rituala do oglasa</div>
     <div><b>Moj OK</b>pre svake objave, poruke i promene</div>
     <div><b>Lokalno</b>snimci i podaci klijenata ne izlaze sa računara</div>
@@ -124,6 +199,40 @@
   </div>
 </section>
 
+</div>
+
+<!-- USTEDA -->
+<div class="los-strana">
+<section class="sekcija" id="usteda">
+  <div class="kontejner">
+    <span class="los-deo">Šta sistem štedi</span>
+    <h2>Novac i vreme, svakog meseca</h2>
+    <div class="los-novac">
+      <div class="los-novac-red"><span class="ime">Editor za video</span><span class="los-traka"><i style="width:50%"></i></span><span class="iznos"><s>750 €</s> → <b>0 €</b></span></div>
+      <div class="los-novac-red"><span class="ime">Jedan čovek u isporuci</span><span class="los-traka"><i style="width:100%"></i></span><span class="iznos"><s>1.500 €</s> → <b>0 €</b></span></div>
+      <div class="los-novac-ukupno"><span>Ukupno</span><b>2.250 € mesečno · 27.000 € godišnje</b></div>
+    </div>
+    <h3 class="los-graf-naslov">Sati mesečno, ranije i sada</h3>
+    <div class="los-graf-legenda"><span><i class="ranije"></i>ranije</span><span><i class="sada"></i>sada</span></div>
+    <div class="los-graf">
+      <div class="los-graf-red"><span class="ime">Objave za sve mreže</span><span class="los-traka"><i class="ranije" style="width:100.0%"></i><i class="sada" style="width:16.7%"></i></span><span class="br">24 h → 4 h</span><b>−20 h</b></div>
+      <div class="los-graf-red"><span class="ime">Analiza biznisa klijenta i izveštaji</span><span class="los-traka"><i class="ranije" style="width:75.0%"></i><i class="sada" style="width:25.0%"></i></span><span class="br">18 h → 6 h</span><b>−12 h</b></div>
+      <div class="los-graf-red"><span class="ime">Oglasi: analiza i nove kreative</span><span class="los-traka"><i class="ranije" style="width:66.7%"></i><i class="sada" style="width:16.7%"></i></span><span class="br">16 h → 4 h</span><b>−12 h</b></div>
+      <div class="los-graf-red"><span class="ime">Čitanje i trijaža mejlova</span><span class="los-traka"><i class="ranije" style="width:62.5%"></i><i class="sada" style="width:16.7%"></i></span><span class="br">15 h → 4 h</span><b>−11 h</b></div>
+      <div class="los-graf-red"><span class="ime">Newsletter i sekvence</span><span class="los-traka"><i class="ranije" style="width:50.0%"></i><i class="sada" style="width:8.3%"></i></span><span class="br">12 h → 2 h</span><b>−10 h</b></div>
+      <div class="los-graf-red"><span class="ime">Analiza posle poziva i ponude</span><span class="los-traka"><i class="ranije" style="width:50.0%"></i><i class="sada" style="width:12.5%"></i></span><span class="br">12 h → 3 h</span><b>−9 h</b></div>
+      <div class="los-graf-red"><span class="ime">Istraživanje tržišta i konkurencije</span><span class="los-traka"><i class="ranije" style="width:33.3%"></i><i class="sada" style="width:4.2%"></i></span><span class="br">8 h → 1 h</span><b>−7 h</b></div>
+      <div class="los-graf-red"><span class="ime">Montaža: pregled i dogovor oko klipova</span><span class="los-traka"><i class="ranije" style="width:41.7%"></i><i class="sada" style="width:16.7%"></i></span><span class="br">10 h → 4 h</span><b>−6 h</b></div>
+      <div class="los-graf-red"><span class="ime">Prezentacije i landing strane</span><span class="los-traka"><i class="ranije" style="width:33.3%"></i><i class="sada" style="width:8.3%"></i></span><span class="br">8 h → 2 h</span><b>−6 h</b></div>
+      <div class="los-graf-red"><span class="ime">Priprema za pozive</span><span class="los-traka"><i class="ranije" style="width:25.0%"></i><i class="sada" style="width:4.2%"></i></span><span class="br">6 h → 1 h</span><b>−5 h</b></div>
+      <div class="los-graf-red"><span class="ime">Zadaci i dogovor sa timom</span><span class="los-traka"><i class="ranije" style="width:25.0%"></i><i class="sada" style="width:8.3%"></i></span><span class="br">6 h → 2 h</span><b>−4 h</b></div>
+      <div class="los-graf-red"><span class="ime">Podsetnici i upitnici pre poziva</span><span class="los-traka"><i class="ranije" style="width:12.5%"></i><i class="sada" style="width:0.8%"></i></span><span class="br">3 h → 0 h</span><b>−3 h</b></div>
+      <div class="los-graf-red"><span class="ime">Administracija kursa</span><span class="los-traka"><i class="ranije" style="width:12.5%"></i><i class="sada" style="width:0.8%"></i></span><span class="br">3 h → 0 h</span><b>−3 h</b></div>
+      <div class="los-graf-red ukupno"><span class="ime">Ukupno</span><span class="los-traka"></span><span class="br">141 h → 33 h</span><b>−108 h</b></div>
+    </div>
+    <p class="los-napomena">Okvirna procena za prosečan mesec, po mom iskustvu pre i posle uvođenja sistema. 108 sati je oko dve i po radne nedelje.</p>
+  </div>
+</section>
 </div>
 
 <!-- DEO 1 -->
@@ -154,6 +263,7 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">03</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−11 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>AI čita mejlove umesto mene</h3>
         <ul class="lista">
@@ -204,6 +314,7 @@
     <div class="mreza dve" style="margin-top:32px">
       <div class="kartica los-kartica">
         <div class="broj">07</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M17 6.5A7 7 0 1 0 17 17.5M4 10h9M4 14h9"/></svg>−750 € i −6 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>Montaža videa kroz razgovor</h3>
         <ul class="lista">
@@ -226,6 +337,7 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">09</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−20 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>AI strateg sadržaja</h3>
         <ul class="lista">
@@ -256,6 +368,7 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">11</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−12 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>Agent za plaćene oglase</h3>
         <ul class="lista">
@@ -268,6 +381,7 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">12</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−7 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span><span class="los-status vrsta">Bot</span></div>
         <h3>Tržište, konkurencija i LinkedIn</h3>
         <ul class="lista">
@@ -300,6 +414,7 @@
     <div class="mreza dve" style="margin-top:32px">
       <div class="kartica los-kartica">
         <div class="broj">13</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−3 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Bot</span></div>
         <h3>Pre poziva: potvrde, podsetnici, upitnik</h3>
         <ul class="lista">
@@ -310,6 +425,7 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">14</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−5 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>Brifing pre poziva</h3>
         <ul class="lista">
@@ -319,6 +435,7 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">15</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−9 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>Posle poziva: analiza, ponuda, sledeći korak</h3>
         <ul class="lista">
@@ -330,6 +447,7 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">16</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−10 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Automatizacija</span></div>
         <h3>Newsletter sekvenca po lead magnetu</h3>
         <ul class="lista">
@@ -354,6 +472,7 @@
       <div class="kartica los-kartica istaknuta">
         <span class="etiketa">Srce mog posla</span>
         <div class="broj">17</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−12 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>Moja metodologija, pretočena u AI</h3>
         <ul class="lista">
@@ -367,11 +486,13 @@
       </div>
       <div class="kartica los-kartica">
         <div class="broj">18</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M17 6.5A7 7 0 1 0 17 17.5M4 10h9M4 14h9"/></svg>−1.500 € i −7 h mesečno</div>
         <h3>Delivery sa timom</h3>
         <ul class="lista">
           <li>Svaki projekat ima tok od ideje do isporuke: faze, odgovorne i definiciju gotovog.</li>
           <li>Zadatke kreiram glasovnom porukom, a tim ih odmah dobija na WhatsApp. Bez mejla i bez prekidanja fokusa.</li>
           <li>Sadržaj ima ceo tok: od ideje do gotovog videa, posta i rasporeda.</li>
+          <li><b>Rezultat:</b> u isporuci radi jedan čovek manje. To je 1.500 € mesečno koje više ne plaćam.</li>
         </ul>
         <h3 style="margin-top:26px">Kurs bez ijednog ručnog koraka</h3>
         <div class="los-oznake"><span class="los-status vrsta">Automatizacija</span></div>
@@ -390,6 +511,7 @@
     <div class="mreza dve">
       <div class="kartica los-kartica">
         <div class="broj">+</div>
+        <div class="los-usteda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>−6 h mesečno</div>
         <div class="los-oznake"><span class="los-status vrsta">Agent</span></div>
         <h3>Prezentacije, landing strane, sajt</h3>
         <ul class="lista">
@@ -448,14 +570,17 @@
     <span class="nadnaslov">Kako se sve povezuje</span>
     <h2>Krug koji se sam hrani</h2>
     <p class="uvod">Delovi ne rade odvojeno. Krug koji zatvaram: ono što kupac kaže na pozivu vraća se u sadržaj i oglase.</p>
-    <div class="los-tok">
-      <div><b>Snimak</b>jedan dugi video ili razgovor</div>
-      <div><b>Sadržaj</b>klipovi i objave za celu nedelju</div>
-      <div><b>Lead magnet</b>komentar sa ključnom reči ili upitnik</div>
-      <div><b>Sekvenca</b>mejlovi prema onome što je skinuo</div>
-      <div><b>Poziv</b>brifing pre, analiza posle</div>
-      <div><b>CRM</b>beleška, faza, sledeći korak</div>
-      <div><b>Oglasi</b>novi hookovi iz reči kupaca, pa nazad u sadržaj</div>
+    <div class="los-krug-wrap">
+      <svg class="los-krug" viewBox="0 0 600 600" role="img" aria-label="Krug: snimak, sadržaj, lead magnet, sekvenca, poziv, CRM, oglasi, pa nazad u snimak"><defs><marker id="los-strelica" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#D47040"/></marker></defs><circle cx="300" cy="300" r="212" fill="none" stroke="#2E2D2D" stroke-width="2"/><path d="M368.7 99.5A212 212 0 0 1 413.9 121.2" fill="none" stroke="#D47040" stroke-width="3" marker-end="url(#los-strelica)"/><path d="M499.7 228.7A212 212 0 0 1 510.8 277.6" fill="none" stroke="#D47040" stroke-width="3" marker-end="url(#los-strelica)"/><path d="M480.2 411.6A212 212 0 0 1 448.9 450.9" fill="none" stroke="#D47040" stroke-width="3" marker-end="url(#los-strelica)"/><path d="M325.1 510.5A212 212 0 0 1 274.9 510.5" fill="none" stroke="#D47040" stroke-width="3" marker-end="url(#los-strelica)"/><path d="M151.1 450.9A212 212 0 0 1 119.8 411.6" fill="none" stroke="#D47040" stroke-width="3" marker-end="url(#los-strelica)"/><path d="M89.2 277.6A212 212 0 0 1 100.3 228.7" fill="none" stroke="#D47040" stroke-width="3" marker-end="url(#los-strelica)"/><path d="M186.1 121.2A212 212 0 0 1 231.3 99.5" fill="none" stroke="#D47040" stroke-width="3" marker-end="url(#los-strelica)"/><circle cx="300.0" cy="88.0" r="56" fill="#252424" stroke="#D47040" stroke-width="2.5"/><text x="300.0" y="76.0" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#E36B2F">01</text><text x="300.0" y="100.0" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Snimak</text><circle cx="465.7" cy="167.8" r="56" fill="#252424" stroke="#D47040" stroke-width="2.5"/><text x="465.7" y="155.8" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#E36B2F">02</text><text x="465.7" y="179.8" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Sadržaj</text><circle cx="506.7" cy="347.2" r="56" fill="#252424" stroke="#D47040" stroke-width="2.5"/><text x="506.7" y="335.2" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#E36B2F">03</text><text x="506.7" y="359.2" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Lead magnet</text><circle cx="392.0" cy="491.0" r="56" fill="#252424" stroke="#D47040" stroke-width="2.5"/><text x="392.0" y="479.0" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#E36B2F">04</text><text x="392.0" y="503.0" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Sekvenca</text><circle cx="208.0" cy="491.0" r="56" fill="#252424" stroke="#D47040" stroke-width="2.5"/><text x="208.0" y="479.0" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#E36B2F">05</text><text x="208.0" y="503.0" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Poziv</text><circle cx="93.3" cy="347.2" r="56" fill="#252424" stroke="#D47040" stroke-width="2.5"/><text x="93.3" y="335.2" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#E36B2F">06</text><text x="93.3" y="359.2" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">CRM</text><circle cx="134.3" cy="167.8" r="56" fill="#D47040" stroke="#D47040" stroke-width="2.5"/><text x="134.3" y="155.8" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#1C1B1B">07</text><text x="134.3" y="179.8" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Oglasi</text><text x="300" y="286" text-anchor="middle" font-family="Manrope,sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Reči kupca</text><text x="300" y="316" text-anchor="middle" font-family="Manrope,sans-serif" font-size="22" font-weight="800" fill="#E36B2F">postaju novi hook</text><text x="300" y="344" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" fill="#CFCAC2">i krug kreće ponovo</text></svg>
+      <ol class="los-krug-lista">
+        <li><b>01 · Snimak</b>jedan dugi video ili razgovor</li>
+        <li><b>02 · Sadržaj</b>klipovi i objave za celu nedelju</li>
+        <li><b>03 · Lead magnet</b>komentar sa ključnom reči ili upitnik</li>
+        <li><b>04 · Sekvenca</b>mejlovi prema onome što je skinuo</li>
+        <li><b>05 · Poziv</b>brifing pre, analiza posle</li>
+        <li><b>06 · CRM</b>beleška, faza, sledeći korak</li>
+        <li><b>07 · Oglasi</b>novi hookovi iz reči kupaca</li>
+      </ol>
     </div>
   </div>
 </section>
