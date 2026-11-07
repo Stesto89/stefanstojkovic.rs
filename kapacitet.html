@@ -39,11 +39,24 @@
 .vsl .dugmad{justify-content:center;margin-top:28px}
 .vsl .dugme{font-size:1.08rem;padding:16px 30px}
 .vsl-napomena{color:var(--tekst-svetli);font-size:.9rem;margin-top:12px}
+.vsl-dokaz{background:var(--krem);padding:64px 0 72px}
+.vsl-dokaz h2{text-align:center;margin:0 0 32px}
+.vsl-citati{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:980px;margin:0 auto}
+.vsl-citat{background:var(--bela);border-radius:var(--radius);box-shadow:var(--senka);padding:26px 26px 22px;margin:0;display:flex;flex-direction:column}
+.vsl-citat blockquote{margin:0 0 18px;font-size:1.04rem;line-height:1.6}
+.vsl-citat blockquote::before{content:"“";display:block;font-size:3rem;line-height:.6;color:var(--narandzasta);font-weight:800;margin-bottom:6px}
+.vsl-citat figcaption{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--linija)}
+.vsl-citat img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.vsl-citat strong{display:block}
+.vsl-citat span{font-size:.9rem;color:var(--tekst-2)}
+.vsl-dokaz .dugmad{justify-content:center;margin-top:36px}
 .lender-zaglavlje{position:static}
 .lender-zaglavlje .kontejner{justify-content:center}
 .lender-podnozje{padding:22px 0}
 .lender-podnozje .dno{margin:0;padding:0;border:0}
 @media (max-width:640px){
+  .vsl-citati{grid-template-columns:1fr}
+  .vsl-dokaz{padding:48px 0 56px}
   .vsl{padding:24px 0 56px}
   .vsl-uvod{font-size:1rem}
   .vsl h1{font-size:1.5rem;margin-bottom:12px}
@@ -73,6 +86,31 @@
 
     <div class="dugmad"><a class="dugme" href="poziv.html">Proveri da li je ovo za tebe</a></div>
     <p class="vsl-napomena">Poziv traje 30 minuta i bez obaveze je.</p>
+  </div>
+</section>
+
+<section class="vsl-dokaz">
+  <div class="kontejner">
+    <h2>Šta kažu vlasnici i lideri sa kojima sam radio</h2>
+    <div class="vsl-citati">
+      <figure class="vsl-citat">
+        <blockquote>Nisam zaposlio osobu i nisam dao 6.000 € za 4 meseca, a otvorio sam sebi kapacitet da ubacim još 2 klijenta. Sa istim troškovima, s istom radnom snagom, napravio sam više para.</blockquote>
+        <figcaption><img src="img/dusan.jpg" alt="Dušan Kocić" loading="lazy"><div><strong>Dušan Kocić</strong><span>vlasnik, Floumate</span></div></figcaption>
+      </figure>
+      <figure class="vsl-citat">
+        <blockquote>Vratio sam svoje vreme kao osnivač. Više ne gasim požare. Svaki put kad uzmemo novog klijenta, imamo sistematičan proces.</blockquote>
+        <figcaption><img src="img/patrick.jpg" alt="Patrick Burns" loading="lazy"><div><strong>Patrick Burns</strong><span>Patrick Burns Co., SAD (prevod sa engleskog)</span></div></figcaption>
+      </figure>
+      <figure class="vsl-citat">
+        <blockquote>Toliko stvari nam se raščistilo na jednoj radionici: koliko taskova radimo duplo, koliko nismo automatizovali, a mogli smo.</blockquote>
+        <figcaption><img src="img/aleksandar.jpg" alt="Aleksandar Vasić" loading="lazy"><div><strong>Aleksandar Vasić</strong><span>Otvori LLC</span></div></figcaption>
+      </figure>
+      <figure class="vsl-citat">
+        <blockquote>Tim je postao stabilniji i, najbitnije, siguran u to što radi. Stefana bih predložio svim timovima koji imaju problem sa organizacijom, produkcijom, probijanjem rokova.</blockquote>
+        <figcaption><img src="img/tahir.jpg" alt="Tahir Slezović" loading="lazy"><div><strong>Tahir Slezović</strong><span>tehnički direktor, Tetris projekti</span></div></figcaption>
+      </figure>
+    </div>
+    <div class="dugmad"><a class="dugme" href="poziv.html">Proveri da li je ovo za tebe</a></div>
   </div>
 </section>
 
