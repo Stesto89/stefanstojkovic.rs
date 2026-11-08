@@ -54,6 +54,9 @@ fbq('init','2146159002963753');fbq('track','PageView');
 .vsl-citat img{width:52px;height:52px;border-radius:50%;object-fit:cover}
 .vsl-citat strong{display:block}
 .vsl-citat span{font-size:.9rem;color:var(--tekst-2)}
+.vsl-citat .rez{font-weight:800;font-size:1.12rem;line-height:1.3;margin:0 0 10px;color:var(--tekst)}
+.vsl-citat .inicijali{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:var(--crna);color:var(--narandzasta);display:grid;place-items:center;font-weight:800}
+.vsl-citati .vsl-citat:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 10px);justify-self:center}
 .vsl-dokaz .dugmad{justify-content:center;margin-top:36px}
 .lender-zaglavlje{position:static}
 .lender-zaglavlje .kontejner{justify-content:center}
@@ -61,6 +64,7 @@ fbq('init','2146159002963753');fbq('track','PageView');
 .lender-podnozje .dno{margin:0;padding:0;border:0}
 @media (max-width:640px){
   .vsl-citati{grid-template-columns:1fr}
+  .vsl-citati .vsl-citat:last-child:nth-child(odd){max-width:none}
   .vsl-dokaz{padding:48px 0 56px}
   .vsl{padding:24px 0 56px}
   .vsl-uvod{font-size:1rem}
@@ -99,20 +103,29 @@ fbq('init','2146159002963753');fbq('track','PageView');
     <h2>Šta kažu vlasnici i lideri sa kojima sam radio</h2>
     <div class="vsl-citati">
       <figure class="vsl-citat">
+        <div class="rez">Dva nova klijenta, bez novog zaposlenog</div>
         <blockquote>Nisam zaposlio osobu i nisam dao 6.000 € za 4 meseca, a otvorio sam sebi kapacitet da ubacim još 2 klijenta. Sa istim troškovima, s istom radnom snagom, napravio sam više para.</blockquote>
         <figcaption><img src="img/dusan.jpg" alt="Dušan Kocić" loading="lazy"><div><strong>Dušan Kocić</strong><span>vlasnik, Floumate</span></div></figcaption>
       </figure>
       <figure class="vsl-citat">
-        <blockquote>Vratio sam svoje vreme kao osnivač. Više ne gasim požare. Svaki put kad uzmemo novog klijenta, imamo sistematičan proces.</blockquote>
-        <figcaption><img src="img/patrick.jpg" alt="Patrick Burns" loading="lazy"><div><strong>Patrick Burns</strong><span>Patrick Burns Co., SAD</span></div></figcaption>
+        <div class="rez">Agencija spremna za rast</div>
+        <blockquote>Stefan je bio presudan da u agenciji izgradimo infrastrukturu koja može da raste. Unosi jasnoću, strukturu i disciplinu u složene sisteme. Bez njegovog vođenja operative ne bismo mogli da porastemo do nivoa kojem težimo. Preporučujem ga svakom osnivaču koji ozbiljno želi da skalira biznis na pravi način.</blockquote>
+        <figcaption><img src="img/patrick.jpg" alt="Patrick Burns" loading="lazy"><div><strong>Patrick Burns</strong><span>osnivač, Patrick Burns Co., SAD</span></div></figcaption>
       </figure>
       <figure class="vsl-citat">
+        <div class="rez">Jedna radionica: vidljivo sve što radimo duplo</div>
         <blockquote>Toliko stvari nam se raščistilo na jednoj radionici: koliko taskova radimo duplo, koliko nismo automatizovali, a mogli smo.</blockquote>
         <figcaption><img src="img/aleksandar.jpg" alt="Aleksandar Vasić" loading="lazy"><div><strong>Aleksandar Vasić</strong><span>Otvori LLC</span></div></figcaption>
       </figure>
       <figure class="vsl-citat">
-        <blockquote>Tim je postao stabilniji i, najbitnije, siguran u to što radi. Stefana bih predložio svim timovima koji imaju problem sa organizacijom, produkcijom, probijanjem rokova.</blockquote>
-        <figcaption><img src="img/tahir.jpg" alt="Tahir Slezović" loading="lazy"><div><strong>Tahir Slezović</strong><span>tehnički direktor, Tetris projekti</span></div></figcaption>
+        <div class="rez">Tim koji razume zašto, ne samo šta</div>
+        <blockquote>Neki ljudi donose odgovore. Stefan donosi jasnoću. Posebno bih ga preporučila liderima sa mlađim timovima, punim energije, ideja i pitanja „A zašto baš ovako?”. Stefan to pretvara u prostor za razgovor, razumevanje i rast.</blockquote>
+        <figcaption><span class="inicijali">JD</span><div><strong>Jelena Damnjanović</strong><span>CEO, APOKRIFI</span></div></figcaption>
+      </figure>
+      <figure class="vsl-citat">
+        <div class="rez">Promena koja se stvarno desi</div>
+        <blockquote>Ako tražiš nekoga ko će zaista pokrenuti promenu, a ne samo pričati o njoj, Stefan je pravi izbor. Donosi praktična rešenja koja ljudi stvarno mogu da primene, a tim ostaje uključen i motivisan.</blockquote>
+        <figcaption><span class="inicijali">DB</span><div><strong>Dominika Bula</strong><span>konsultantkinja za unapređenje procesa</span></div></figcaption>
       </figure>
     </div>
     <div class="dugmad"><a class="dugme" href="kapacitet-poziv.html">Proveri da li je ovo za tebe</a></div>
