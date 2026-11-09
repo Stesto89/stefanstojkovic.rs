@@ -34,6 +34,9 @@ fbq('init','2146159002963753');fbq('track','PageView');fbq('track','Schedule');
 .ty .kvacica{width:64px;height:64px;border-radius:50%;background:var(--narandzasta);display:grid;place-items:center;margin:0 auto 18px}
 .ty h1{font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.2;margin:0 0 12px}
 .ty .uvod{color:var(--tekst-svetli);font-size:1.08rem;margin:0 auto}
+.ty-video{position:relative;margin:28px auto 0;border:4px solid var(--narandzasta);border-radius:22px;overflow:hidden;background:#000;aspect-ratio:16/9;box-shadow:0 0 0 1px rgba(212,112,64,.35),0 18px 60px rgba(212,112,64,.28)}
+.ty-video video{display:block;width:100%;height:100%;object-fit:cover}
+.ty .ty-video-napomena{color:var(--tekst-svetli);font-size:.95rem;margin:12px 0 0}
 .ty-telo{background:var(--krem);padding:56px 0 64px}
 .ty-telo .kontejner{max-width:760px}
 .ty-telo h2{margin:0 0 20px}
@@ -51,7 +54,7 @@ fbq('init','2146159002963753');fbq('track','PageView');fbq('track','Schedule');
 .lender-zaglavlje .kontejner{justify-content:center}
 .lender-podnozje{padding:22px 0}
 .lender-podnozje .dno{margin:0;padding:0;border:0}
-@media (max-width:640px){.ty{padding:32px 0 32px}.ty-telo{padding:40px 0 48px}}
+@media (max-width:640px){.ty-video{border-width:3px;border-radius:14px}.ty{padding:32px 0 32px}.ty-telo{padding:40px 0 48px}}
 </style>
 
 <section class="ty">
@@ -59,6 +62,8 @@ fbq('init','2146159002963753');fbq('track','PageView');fbq('track','Schedule');
     <div class="kvacica"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
     <h1>Termin je zakazan.</h1>
     <p class="uvod">Potvrda i link za poziv stižu ti na mejl za par minuta. Ako je ne vidiš, pogledaj i u folderu Promocije ili Spam.</p>
+    <div class="ty-video"><video src="video/zakazan-poziv.mp4?v=1794236971" poster="video/zakazan-poziv.jpg?v=1794236971" controls playsinline preload="metadata"></video></div>
+    <p class="ty-video-napomena">Pogledaj ovaj kratak video pre poziva, traje 2 minuta.</p>
   </div>
 </section>
 
