@@ -11,8 +11,8 @@ const CONFIG = {
   // Glavni video na thank you stranici. Prazno = prvi video za fazu. Upiši YouTube ID ako svima želiš da pokažeš isti video (npr. tvoj novi snimak).
   MAIN_VIDEO_ID: "",
   // Glavni video sa sajta (mp4). Ako je upisan, ima prednost nad YouTube videom.
-  MAIN_VIDEO_MP4: "video/faze-plan.mp4?v=1",
-  MAIN_VIDEO_POSTER: "video/faze-plan.jpg?v=1",
+  MAIN_VIDEO_MP4: "video/faze-plan.mp4?v=2",
+  MAIN_VIDEO_POSTER: "video/faze-plan.jpg?v=2",
   // Poziv na thank you stranici zavisi od toga da li radi sam ili ima tim. Isti link za oba programa.
   PROGRAMS: {
     solo: { name: "Mentorski program za solo preduzetnike",
