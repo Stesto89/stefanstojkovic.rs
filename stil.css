@@ -383,7 +383,8 @@ p { margin: 0 0 1em; }
 .dokaz strong { color: var(--naglasak); font-size: 1.6rem; font-weight: 800; margin-right: 4px; }
 
 /* GHL kalendar na stranici za poziv */
-.kalendar { background: var(--bela); border-radius: 14px; box-shadow: var(--senka); overflow: hidden; }
+.kalendar { background: transparent; border-radius: 0; box-shadow: none; overflow: visible; }
+.kalendar iframe { display: block; background: transparent; }
 
 /* Stranica sa YouTube videima */
 .yt-mreza { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
