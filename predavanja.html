@@ -83,6 +83,19 @@
 .komentar figcaption{margin-top:12px;font-size:.85rem;color:var(--tekst-svetli)}
 .kratki{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
 .kratki span{border:1px solid var(--linija-tamna);background:var(--crna-2);color:var(--bela);border-radius:999px;padding:8px 14px;font-size:.92rem;font-weight:600}
+.mokra-blok{margin-top:48px;padding-top:40px;border-top:1px solid var(--linija-tamna)}
+.mokra-blok h3{color:var(--bela);font-size:1.5rem;margin-bottom:8px}
+.mokra-blok>p{color:var(--tekst-svetli);margin:0}
+.mokra-brojke{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+.mokra-brojke div{background:var(--crna-2);border:1px solid var(--linija-tamna);border-radius:var(--radius);padding:18px}
+.mokra-brojke strong{display:block;font-size:1.6rem;color:var(--naglasak);line-height:1.1;letter-spacing:-.02em}
+.mokra-brojke span{font-size:.88rem;color:var(--tekst-svetli);line-height:1.4;display:block;margin-top:6px}
+@media (max-width:900px){.mokra-brojke{grid-template-columns:repeat(2,1fr)}}
+.slajdovi.tekst{aspect-ratio:auto;display:grid;background:var(--crna-2);border:1px solid var(--linija-tamna);box-shadow:none;max-width:860px;margin:28px auto 0}
+.slajdovi.tekst .slajd{position:relative;inset:auto;grid-area:1/1;padding:44px 80px;display:flex;flex-direction:column;justify-content:center}
+.slajdovi.tekst blockquote{margin:0;color:var(--bela);font-size:1.3rem;line-height:1.5;font-weight:600}
+.slajdovi.tekst figcaption{position:static;background:none;padding:0;border-radius:0;font-weight:500;margin-top:14px;color:var(--tekst-svetli);font-size:.92rem}
+@media (max-width:640px){.slajdovi.tekst .slajd{padding:28px 22px 80px}.slajdovi.tekst blockquote{font-size:1.1rem}.slajdovi.tekst .slajd-dugme{top:auto;bottom:14px;transform:none}}
 .mokra{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;margin-top:36px;background:var(--crna-2);border:1px solid var(--linija-tamna);border-radius:var(--radius);padding:24px 26px}
 .mokra strong{font-size:2.6rem;color:var(--naglasak);letter-spacing:-.02em;line-height:1}
 .mokra p{margin:0;color:var(--tekst-svetli)}
@@ -366,10 +379,34 @@
     <div class="kratki" aria-label="Kratki komentari">
       <span>The best presentation so far</span><span>Prepare to think differently!</span><span>Lot of experience packed in small time</span><span>Praktično, jasno</span><span>8 bit heaven</span><span>Very practical</span><span>Amazing session</span>
     </div>
-    <div class="mokra">
-      <strong>9,6/10</strong>
-      <p><b>Mokrogorska poslovna škola.</b> Kao spoljni trener i facilitator radim sa senior timovima kompanija i u trogodišnjem liderskom programu „Bolji biznis”, gde su me učesnici ocenili sa 9,6 od 10.</p>
+    <div class="mokra-blok">
+      <h3>Treninzi za Mokrogorsku poslovnu školu</h3>
+      <p>Posle svakog treninga Mokrogorska anonimno pita učesnike kako su ocenili program i predavača, na skali od 1 do 5.</p>
+      <div class="mokra-brojke">
+        <div><strong>4,8 / 5</strong><span>prosečna ocena predavača, 2025. i 2026.</span></div>
+        <div><strong>4,95 / 5</strong><span>„Predavač je bio jasan i stručan”</span></div>
+        <div><strong>+43%</strong><span>znanja po samoproceni učesnika, pre i posle treninga</span></div>
+        <div><strong>83</strong><span>NPS programa, nivo „odličan”</span></div>
+        <div><strong>9,6/10</strong><span>ocena trogodišnjeg liderskog programa „Bolji biznis”</span></div>
+      </div>
     </div>
+    <div class="slajdovi tekst" aria-roledescription="carousel" aria-label="Komentari učesnika Mokrogorske poslovne škole">
+      <figure class="slajd aktivan"><blockquote>„Očekivanja su nadmašena, praksa je dosta pomogla kao i same vežbe, očekivao sam samo prezentaciju.”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Predavač je bio jasan, glasan i vodio je radionicu na pravi način, sa dosta primera.”</blockquote><figcaption>Učesnik treninga · Veštine rukovođenja, Beograd, 2026.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Nisam imao posebna očekivanja a ni jasan cilj pre početka. Ali značilo je više nego što sam pretpostavljao.”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Akcioni plan: više ne moram usmeno da čuvam, sada imam tabelu i način kako šta da ispišem i posle da pokušam da primenim za određene ljude.”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Stefan, predavanje je bilo jasno, konkretno i bez suvišnog teorijskog okolišanja.”</blockquote><figcaption>Učesnik treninga · Donošenje odluka, Mokra Gora, 2026.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Predavač je uključio u kompletnu tematiku svakog slušaoca, individualno i grupno. Slušaoci su međusobno razmenjivali probleme, rešenja, ideje i iskustva.”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Odlično predavanje, dobar odnos prakse i teorije.”</blockquote><figcaption>Učesnik treninga · Veštine rukovođenja, Beograd, 2026.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Interaktivnost i diskusija sa predavačem učinile su predavanja zanimljivim, držalo mi je pažnju.”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Sve je idealno. Sadržaj i organizacija programa su prevazišli moja očekivanja.”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Sve je super, prilagodio se grupi kako i treba da bude.”</blockquote><figcaption>Učesnik treninga · Veštine rukovođenja, Beograd, 2026.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Svidela mi se ideja o lideru „baštovanu”.”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <figure class="slajd"><blockquote>„Pozdrav predavaču, kidalica je!”</blockquote><figcaption>Učesnik treninga · Veštine vođenja tima, interni trening, 2025.</figcaption></figure>
+      <button class="slajd-dugme levo" type="button" aria-label="Prethodni komentar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="slajd-dugme desno" type="button" aria-label="Sledeći komentar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="slajd-tacke"></div>
   </div>
 </section>
 
