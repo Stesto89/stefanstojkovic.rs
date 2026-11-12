@@ -148,6 +148,17 @@
 .mokra p b{color:var(--bela)}
 @media (max-width:640px){.mokra{grid-template-columns:1fr;gap:8px}}
 .forma-gost{background:var(--bela);border-radius:var(--radius);box-shadow:var(--senka);padding:10px;margin-top:28px}
+.konf-naslov{font-size:1.3rem;margin:48px 0 16px}
+.konf-spisak{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.konf-spisak li{background:var(--krem);border:1px solid var(--linija);border-radius:999px;padding:9px 16px;font-size:.95rem;line-height:1.3}
+.konf-spisak b{font-weight:700}
+.konf-spisak span{color:var(--tekst-2);margin-left:6px}
+.konf-kartice{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.konf-kartice figure{margin:0}
+.konf-kartice img{width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--krem);border-radius:14px;box-shadow:var(--senka)}
+.konf-kartice figcaption{font-size:.88rem;color:var(--tekst-2);margin-top:8px;line-height:1.35}
+@media (max-width:900px){.konf-kartice{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.konf-kartice{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 </style>
 
 <section class="hero pr-hero">
@@ -247,7 +258,7 @@
 <section class="sekcija" id="predavanja">
   <div class="kontejner">
     <span class="nadnaslov">Predavanja i paneli</span>
-    <h2>Snimci sa konferencija</h2>
+    <h2>Snimci sa nekih od konferencija</h2>
     <div class="yt-mreza">
       <article class="yt-kartica">
         <a class="yt-slika" href="https://www.youtube.com/watch?v=jPnWQ5TTG9M" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: predavanje na Regional Scrum Gathering 2023"><img src="https://i.ytimg.com/vi/jPnWQ5TTG9M/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">48 min</span></a>
@@ -270,13 +281,34 @@
           <p>Beograd, decembar 2025, Menadžment Centar Beograd. Kako uključiti ljude u unapređenje, da promena ne bude projekat nego svakodnevni način rada.</p>
         </div>
       </article>
-      <article class="yt-kartica">
-        <a class="yt-slika" href="https://youtu.be/hJ7sh50Zctk" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: razgovor sa Lean Change zajednicom"><img src="https://i.ytimg.com/vi/hJ7sh50Zctk/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">20 min</span></a>
-        <div class="yt-telo">
-          <h3><a href="https://youtu.be/hJ7sh50Zctk" target="_blank" rel="noopener">Šta sam naučio sa prve Lean Change radionice</a></h3>
-          <p>April 2024. Razgovor sa Lean Change zajednicom posle moje prve radionice kao licenciranog trenera: zašto se promena radi sa ljudima, a ne nad njima. Na engleskom.</p>
-        </div>
-      </article>
+    </div>
+    <h3 class="konf-naslov">Govorio sam još na</h3>
+    <ul class="konf-spisak">
+      <li><b>Australasian Change Days</b><span>2024</span></li>
+      <li><b>Bosnia Agile Day</b><span>Sarajevo, 2024</span></li>
+      <li><b>Regional Scrum Gathering</b><span>Beograd, 2024</span></li>
+      <li><b>Online Scrum Master Summit</b><span>online, 2024. i 2025.</span></li>
+      <li><b>Agile Serbia</b><span>Beograd, 2024. i 2025.</span></li>
+      <li><b>ScrumImpulz</b><span>Slovačka, 2025</span></li>
+      <li><b>The Science of Leadership, Google Developer Group</b><span>Beograd, 2025</span></li>
+      <li><b>INO.30NA, ICT Hub</b><span>Beograd, 2025</span></li>
+      <li><b>Agile Pro Center</b><span>2025</span></li>
+      <li><b>Tim Centar</b><span>2024</span></li>
+    </ul>
+    <h3 class="konf-naslov">Najave sa konferencija</h3>
+    <div class="konf-kartice">
+      <figure><img src="img/konferencije/rsg-balkans-2023.jpg" alt="Najava predavanja: Regional Scrum Gathering Balkans 2023" loading="lazy"><figcaption>Regional Scrum Gathering Balkans 2023</figcaption></figure>
+      <figure><img src="img/konferencije/abe-2024.jpg" alt="Najava predavanja: AgileByExample 2024, Poljska" loading="lazy"><figcaption>AgileByExample 2024, Poljska</figcaption></figure>
+      <figure><img src="img/konferencije/change-days-2024.jpg" alt="Najava predavanja: Australasian Change Days 2024" loading="lazy"><figcaption>Australasian Change Days 2024</figcaption></figure>
+      <figure><img src="img/konferencije/bosnia-agile-day-2024.jpg" alt="Najava predavanja: Bosnia Agile Day 2024" loading="lazy"><figcaption>Bosnia Agile Day 2024</figcaption></figure>
+      <figure><img src="img/konferencije/rsg-2024.jpg" alt="Najava predavanja: Regional Scrum Gathering 2024, Beograd" loading="lazy"><figcaption>Regional Scrum Gathering 2024, Beograd</figcaption></figure>
+      <figure><img src="img/konferencije/agile-playground-2024.jpg" alt="Najava predavanja: Agile Playground, 2024" loading="lazy"><figcaption>Agile Playground, 2024</figcaption></figure>
+      <figure><img src="img/konferencije/scrumimpulz-2025.jpg" alt="Najava predavanja: ScrumImpulz 2025, Slovačka" loading="lazy"><figcaption>ScrumImpulz 2025, Slovačka</figcaption></figure>
+      <figure><img src="img/konferencije/gdg-science-of-leadership-2025.jpg" alt="Najava predavanja: The Science of Leadership 2025, Beograd" loading="lazy"><figcaption>The Science of Leadership 2025, Beograd</figcaption></figure>
+      <figure><img src="img/konferencije/osms-2025.jpg" alt="Najava predavanja: Online Scrum Master Summit 2025" loading="lazy"><figcaption>Online Scrum Master Summit 2025</figcaption></figure>
+      <figure><img src="img/konferencije/ino30na-2025.jpg" alt="Najava predavanja: INO.30NA 2025, ICT Hub" loading="lazy"><figcaption>INO.30NA 2025, ICT Hub</figcaption></figure>
+      <figure><img src="img/konferencije/factory-kongres-2025.jpg" alt="Najava predavanja: 7. Factory kongres 2025, Beograd" loading="lazy"><figcaption>7. Factory kongres 2025, Beograd</figcaption></figure>
+      <figure><img src="img/konferencije/mentor-the-young.jpg" alt="Najava predavanja: Mentor the Young: Temelji jakog tima" loading="lazy"><figcaption>Mentor the Young: Temelji jakog tima</figcaption></figure>
     </div>
     <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
@@ -292,6 +324,13 @@
         <div class="yt-telo">
           <h3><a href="https://www.youtube.com/watch?v=_uaLyGtETQM" target="_blank" rel="noopener">Katarza TV: Umeš li da koristiš kalendar?</a></h3>
           <p>Maj 2026, uživo. Razlika između znanja o produktivnosti i sistema koji zaista radi, kroz alate, primere i pitanja publike.</p>
+        </div>
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
+        <a class="yt-slika" href="https://youtu.be/hJ7sh50Zctk" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: razgovor sa Lean Change zajednicom"><img src="https://i.ytimg.com/vi/hJ7sh50Zctk/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">20 min</span></a>
+        <div class="yt-telo">
+          <h3><a href="https://youtu.be/hJ7sh50Zctk" target="_blank" rel="noopener">Šta sam naučio sa prve Lean Change radionice</a></h3>
+          <p>April 2024. Razgovor sa Lean Change zajednicom posle moje prve radionice kao licenciranog trenera: zašto se promena radi sa ljudima, a ne nad njima. Na engleskom.</p>
         </div>
       </article></figure>
       <figure class="slajd"><article class="yt-kartica">
