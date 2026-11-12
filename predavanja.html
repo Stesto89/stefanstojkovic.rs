@@ -149,16 +149,15 @@
 @media (max-width:640px){.mokra{grid-template-columns:1fr;gap:8px}}
 .forma-gost{background:var(--bela);border-radius:var(--radius);box-shadow:var(--senka);padding:10px;margin-top:28px}
 .konf-naslov{font-size:1.3rem;margin:48px 0 16px}
-.konf-spisak{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
-.konf-spisak li{background:var(--krem);border:1px solid var(--linija);border-radius:999px;padding:9px 16px;font-size:.95rem;line-height:1.3}
-.konf-spisak b{font-weight:700}
-.konf-spisak span{color:var(--tekst-2);margin-left:6px}
-.konf-kartice{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.konf-kartice figure{margin:0}
-.konf-kartice img{width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--krem);border-radius:14px;box-shadow:var(--senka)}
+.konf-traka{overflow:hidden;container-type:inline-size;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.konf-kartice{display:flex;width:max-content;animation:konf-traka 75s linear infinite}
+.konf-traka:hover .konf-kartice{animation-play-state:paused}
+.konf-kartice figure{margin:0;flex:0 0 calc(100cqw / 4);box-sizing:border-box;padding:0 9px 12px}
+.konf-kartice img{width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--krem);border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
 .konf-kartice figcaption{font-size:.88rem;color:var(--tekst-2);margin-top:8px;line-height:1.35}
-@media (max-width:900px){.konf-kartice{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:640px){.konf-kartice{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+@keyframes konf-traka{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:640px){.konf-kartice figure{flex-basis:100cqw;padding:0 14px 12px}.konf-kartice{animation-duration:90s}}
+@media (prefers-reduced-motion:reduce){.konf-traka{overflow-x:auto}.konf-kartice{animation:none}}
 </style>
 
 <section class="hero pr-hero">
@@ -282,36 +281,40 @@
         </div>
       </article>
     </div>
-    <h3 class="konf-naslov">Govorio sam još na</h3>
-    <ul class="konf-spisak">
-      <li><b>Australasian Change Days</b><span>2024</span></li>
-      <li><b>Bosnia Agile Day</b><span>Sarajevo, 2024</span></li>
-      <li><b>Regional Scrum Gathering</b><span>Beograd, 2024</span></li>
-      <li><b>Online Scrum Master Summit</b><span>online, 2024. i 2025.</span></li>
-      <li><b>Agile Serbia</b><span>Beograd, 2024. i 2025.</span></li>
-      <li><b>ScrumImpulz</b><span>Slovačka, 2025</span></li>
-      <li><b>The Science of Leadership, Google Developer Group</b><span>Beograd, 2025</span></li>
-      <li><b>INO.30NA, ICT Hub</b><span>Beograd, 2025</span></li>
-      <li><b>Agile Pro Center</b><span>2025</span></li>
-      <li><b>Tim Centar</b><span>2024</span></li>
-    </ul>
     <h3 class="konf-naslov">Najave sa konferencija</h3>
-    <div class="konf-kartice">
-      <figure><img src="img/konferencije/rsg-balkans-2023.jpg" alt="Najava: Regional Scrum Gathering Balkans 2023" loading="lazy"><figcaption>Regional Scrum Gathering Balkans 2023</figcaption></figure>
-      <figure><img src="img/konferencije/abe-2024.jpg" alt="Najava: AgileByExample 2024, Poljska" loading="lazy"><figcaption>AgileByExample 2024, Poljska</figcaption></figure>
-      <figure><img src="img/konferencije/osms-2025.jpg" alt="Najava: Online Scrum Master Summit 2025" loading="lazy"><figcaption>Online Scrum Master Summit 2025</figcaption></figure>
-      <figure><img src="img/konferencije/change-days-2024.jpg" alt="Najava: Australasian Change Days 2024" loading="lazy"><figcaption>Australasian Change Days 2024</figcaption></figure>
-      <figure><img src="img/konferencije/bosnia-agile-day-2024.jpg" alt="Najava: Bosnia Agile Day 2024" loading="lazy"><figcaption>Bosnia Agile Day 2024</figcaption></figure>
-      <figure><img src="img/konferencije/tetris-talks.jpg" alt="Najava: Talks &amp; Cocktails: Tetris Block Puzzle, Beograd" loading="lazy"><figcaption>Talks &amp; Cocktails: Tetris Block Puzzle, Beograd</figcaption></figure>
-      <figure><img src="img/konferencije/rsg-2024.jpg" alt="Najava: Regional Scrum Gathering 2024, Beograd" loading="lazy"><figcaption>Regional Scrum Gathering 2024, Beograd</figcaption></figure>
-      <figure><img src="img/konferencije/gdg-science-of-leadership-2025.jpg" alt="Najava: The Science of Leadership 2025, Beograd" loading="lazy"><figcaption>The Science of Leadership 2025, Beograd</figcaption></figure>
-      <figure><img src="img/konferencije/agile-playground-2024.jpg" alt="Najava: Agile Playground, 2024" loading="lazy"><figcaption>Agile Playground, 2024</figcaption></figure>
-      <figure><img src="img/konferencije/scrumimpulz-2025.jpg" alt="Najava: ScrumImpulz 2025, Slovačka" loading="lazy"><figcaption>ScrumImpulz 2025, Slovačka</figcaption></figure>
-      <figure><img src="img/konferencije/lean-humanitarna-radionica.jpg" alt="Najava: Humanitarna radionica: Lean upravljanje promenama" loading="lazy"><figcaption>Humanitarna radionica: Lean upravljanje promenama</figcaption></figure>
-      <figure><img src="img/konferencije/ino30na-2025.jpg" alt="Najava: INO.30NA 2025, ICT Hub" loading="lazy"><figcaption>INO.30NA 2025, ICT Hub</figcaption></figure>
-      <figure><img src="img/konferencije/osms-2025-predavanje.jpg" alt="Najava: Online Scrum Master Summit: Work Smarter, Not Harder" loading="lazy"><figcaption>Online Scrum Master Summit: Work Smarter, Not Harder</figcaption></figure>
-      <figure><img src="img/konferencije/factory-kongres-2025.jpg" alt="Najava: 7. Factory kongres 2025, Beograd" loading="lazy"><figcaption>7. Factory kongres 2025, Beograd</figcaption></figure>
-      <figure><img src="img/konferencije/mentor-the-young.jpg" alt="Najava: Mentor the Young: Temelji jakog tima" loading="lazy"><figcaption>Mentor the Young: Temelji jakog tima</figcaption></figure>
+    <div class="konf-traka">
+      <div class="konf-kartice">
+        <figure><img src="img/konferencije/rsg-balkans-2023.jpg" alt="Najava: Regional Scrum Gathering Balkans 2023"><figcaption>Regional Scrum Gathering Balkans 2023</figcaption></figure>
+        <figure><img src="img/konferencije/abe-2024.jpg" alt="Najava: AgileByExample 2024, Poljska"><figcaption>AgileByExample 2024, Poljska</figcaption></figure>
+        <figure><img src="img/konferencije/osms-2025.jpg" alt="Najava: Online Scrum Master Summit 2025"><figcaption>Online Scrum Master Summit 2025</figcaption></figure>
+        <figure><img src="img/konferencije/change-days-2024.jpg" alt="Najava: Australasian Change Days 2024"><figcaption>Australasian Change Days 2024</figcaption></figure>
+        <figure><img src="img/konferencije/bosnia-agile-day-2024.jpg" alt="Najava: Bosnia Agile Day 2024"><figcaption>Bosnia Agile Day 2024</figcaption></figure>
+        <figure><img src="img/konferencije/tetris-talks.jpg" alt="Najava: Talks &amp; Cocktails: Tetris Block Puzzle, Beograd"><figcaption>Talks &amp; Cocktails: Tetris Block Puzzle, Beograd</figcaption></figure>
+        <figure><img src="img/konferencije/rsg-2024.jpg" alt="Najava: Regional Scrum Gathering 2024, Beograd"><figcaption>Regional Scrum Gathering 2024, Beograd</figcaption></figure>
+        <figure><img src="img/konferencije/gdg-science-of-leadership-2025.jpg" alt="Najava: The Science of Leadership 2025, Beograd"><figcaption>The Science of Leadership 2025, Beograd</figcaption></figure>
+        <figure><img src="img/konferencije/agile-playground-2024.jpg" alt="Najava: Agile Playground, 2024"><figcaption>Agile Playground, 2024</figcaption></figure>
+        <figure><img src="img/konferencije/scrumimpulz-2025.jpg" alt="Najava: ScrumImpulz 2025, Slovačka"><figcaption>ScrumImpulz 2025, Slovačka</figcaption></figure>
+        <figure><img src="img/konferencije/lean-humanitarna-radionica.jpg" alt="Najava: Humanitarna radionica: Lean upravljanje promenama"><figcaption>Humanitarna radionica: Lean upravljanje promenama</figcaption></figure>
+        <figure><img src="img/konferencije/ino30na-2025.jpg" alt="Najava: INO.30NA 2025, ICT Hub"><figcaption>INO.30NA 2025, ICT Hub</figcaption></figure>
+        <figure><img src="img/konferencije/osms-2025-predavanje.jpg" alt="Najava: Online Scrum Master Summit: Work Smarter, Not Harder"><figcaption>Online Scrum Master Summit: Work Smarter, Not Harder</figcaption></figure>
+        <figure><img src="img/konferencije/factory-kongres-2025.jpg" alt="Najava: 7. Factory kongres 2025, Beograd"><figcaption>7. Factory kongres 2025, Beograd</figcaption></figure>
+        <figure><img src="img/konferencije/mentor-the-young.jpg" alt="Najava: Mentor the Young: Temelji jakog tima"><figcaption>Mentor the Young: Temelji jakog tima</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/rsg-balkans-2023.jpg" alt="" data-a="Regional Scrum Gathering Balkans 2023"><figcaption>Regional Scrum Gathering Balkans 2023</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/abe-2024.jpg" alt="" data-a="AgileByExample 2024, Poljska"><figcaption>AgileByExample 2024, Poljska</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/osms-2025.jpg" alt="" data-a="Online Scrum Master Summit 2025"><figcaption>Online Scrum Master Summit 2025</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/change-days-2024.jpg" alt="" data-a="Australasian Change Days 2024"><figcaption>Australasian Change Days 2024</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/bosnia-agile-day-2024.jpg" alt="" data-a="Bosnia Agile Day 2024"><figcaption>Bosnia Agile Day 2024</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/tetris-talks.jpg" alt="" data-a="Talks &amp; Cocktails: Tetris Block Puzzle, Beograd"><figcaption>Talks &amp; Cocktails: Tetris Block Puzzle, Beograd</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/rsg-2024.jpg" alt="" data-a="Regional Scrum Gathering 2024, Beograd"><figcaption>Regional Scrum Gathering 2024, Beograd</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/gdg-science-of-leadership-2025.jpg" alt="" data-a="The Science of Leadership 2025, Beograd"><figcaption>The Science of Leadership 2025, Beograd</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/agile-playground-2024.jpg" alt="" data-a="Agile Playground, 2024"><figcaption>Agile Playground, 2024</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/scrumimpulz-2025.jpg" alt="" data-a="ScrumImpulz 2025, Slovačka"><figcaption>ScrumImpulz 2025, Slovačka</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/lean-humanitarna-radionica.jpg" alt="" data-a="Humanitarna radionica: Lean upravljanje promenama"><figcaption>Humanitarna radionica: Lean upravljanje promenama</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/ino30na-2025.jpg" alt="" data-a="INO.30NA 2025, ICT Hub"><figcaption>INO.30NA 2025, ICT Hub</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/osms-2025-predavanje.jpg" alt="" data-a="Online Scrum Master Summit: Work Smarter, Not Harder"><figcaption>Online Scrum Master Summit: Work Smarter, Not Harder</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/factory-kongres-2025.jpg" alt="" data-a="7. Factory kongres 2025, Beograd"><figcaption>7. Factory kongres 2025, Beograd</figcaption></figure>
+        <figure aria-hidden="true"><img src="img/konferencije/mentor-the-young.jpg" alt="" data-a="Mentor the Young: Temelji jakog tima"><figcaption>Mentor the Young: Temelji jakog tima</figcaption></figure>
+      </div>
     </div>
     <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
