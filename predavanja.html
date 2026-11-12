@@ -95,6 +95,17 @@
 .slajdovi.kartice .yt-telo h3{font-size:1.35rem}
 .slajdovi.kartice .slajd-dugme.levo{left:14px}
 @media (max-width:760px){.slajdovi.kartice .yt-kartica{grid-template-columns:1fr}.slajdovi.kartice .yt-slika{min-height:0;aspect-ratio:16/9}.slajdovi.kartice .yt-telo{padding:22px 22px 80px}.slajdovi.kartice .slajd-dugme{top:auto;bottom:14px;transform:none}}
+.gost-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:32px}
+.gost-cta span{font-size:.92rem;color:var(--tekst-2)}
+.tamna .gost-cta span{color:var(--tekst-svetli)}
+.godine-sve{margin-top:24px}
+.godine-sve summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border:2px solid var(--tekst);border-radius:999px;font-weight:800}
+.godine-sve summary::-webkit-details-marker{display:none}
+.godine-sve summary::after{content:"+";font-size:1.2rem;color:var(--narandzasta)}
+.godine-sve[open] summary::after{content:"−"}
+.godine-sve .zatvori,.godine-sve[open] .otvori{display:none}
+.godine-sve[open] .zatvori{display:inline}
+.godine-sve summary:hover{border-color:var(--narandzasta)}
 .mokra-blok{margin-top:48px;padding-top:40px;border-top:1px solid var(--linija-tamna)}
 .mokra-blok h3{color:var(--bela);font-size:1.5rem;margin-bottom:8px}
 .mokra-blok>p{color:var(--tekst-svetli);margin:0}
@@ -180,6 +191,7 @@
     <div class="slajd-tacke"></div>
     <div class="zbir"><div><strong>235</strong><span>odgovora publike</span></div><div><strong>234 od 235</strong><span>ocenilo je sesiju kao korisnu</span></div><div><strong>98%</strong><span>želi da me ponovo sluša</span></div></div>
     <p class="izvor-napomena">Izvor: Talkadot izveštaji publike. Svi komentari su na <a href="https://www.talkadot.com/s/stef" target="_blank" rel="noopener">mom javnom Talkadot profilu</a>.</p>
+    <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
 </section>
 
@@ -217,6 +229,7 @@
         </div>
       </article>
     </div>
+    <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
 </section>
 
@@ -286,6 +299,7 @@
     </div>
     <div class="slajd-tacke"></div>
     </div>
+    <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
 </section>
 
@@ -302,6 +316,7 @@
       <p>„AI neće zameniti lidere, ali će oni lideri koji koriste AI zameniti one koji to ne rade.”</p>
       <cite>Ključna poruka mog predavanja, kako su je preneli Euronews Srbija i Danas, jun 2025.</cite>
     </blockquote>
+    <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
 </section>
 
@@ -323,6 +338,9 @@
   <div class="kontejner">
     <span class="nadnaslov">Gde sam govorio</span>
     <h2>Konferencije i događaji po godinama</h2>
+    <p class="uvod">Od 2022. do 2026. ukupno 19 predavanja, radionica, panela, gostovanja i tekstova, u Srbiji, Bosni i Hercegovini, Poljskoj i Slovačkoj i online.</p>
+    <details class="godine-sve">
+      <summary><span class="otvori">Prikaži sve događaje, od 2022. do 2026.</span><span class="zatvori">Sakrij spisak</span></summary>
     <div class="godine">
       <div class="godina"><strong>2026.</strong><ul>
         <li><b>Katarza TV, emisija uživo</b><span>Umeš li da koristiš kalendar? · maj</span></li>
@@ -354,6 +372,7 @@
         <li><b>Lean Community</b><span>Četiri autorska teksta na engleskom</span></li>
       </ul></div>
     </div>
+    </details>
   </div>
 </section>
 
@@ -369,6 +388,7 @@
       <div class="kartica"><div class="broj">Radionica</div><h3>Promena koja izdrži ponedeljak</h3><p>Interaktivna radionica za timove u promeni: šta treba menjati, kojim redom i kako da promena ne nestane posle dve nedelje.</p></div>
       <div class="kartica"><div class="broj">Formati</div><h3>Kako može da izgleda</h3><p>Uvodno ili centralno predavanje, panel, radionica od pola dana do dva dana, podkast ili webinar. Na srpskom ili engleskom, uživo ili online.</p></div>
     </div>
+    <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
 </section>
 
@@ -422,6 +442,7 @@
       <button class="slajd-dugme desno" type="button" aria-label="Sledeći komentar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
     </div>
     <div class="slajd-tacke"></div>
+    <div class="gost-cta"><a class="dugme" href="#poziv-gostovanje">Pozovi me da gostujem</a><span>Popuni kratku formu i naš tim će ti se javiti.</span></div>
   </div>
 </section>
 
@@ -429,7 +450,7 @@
   <div class="kontejner uzak">
     <span class="nadnaslov">Gostovanje</span>
     <h2>Pozovi me da gostujem</h2>
-    <p class="uvod">Konferencija, interni događaj firme, podkast, panel ili radionica. Napiši o kakvom događaju se radi, ko je publika i kada je, i javiću ti se u roku od dva radna dana.</p>
+    <p class="uvod">Konferencija, interni događaj firme, podkast, panel ili radionica. Napiši o kakvom događaju se radi, ko je publika i kada je, i naš tim će ti se javiti.</p>
     <div class="forma-gost"><iframe src="https://api.leadconnectorhq.com/widget/form/7yDV7f5CL59yNBaypUwf" style="width:100%;height:100%;border:none;border-radius:4px;min-height:640px" id="inline-7yDV7f5CL59yNBaypUwf" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-id="7yDV7f5CL59yNBaypUwf" title="Poziv za gostovanje"></iframe><script src="https://api.leadconnectorhq.com/js/form_embed.js"></script></div>
   </div>
 </section>
