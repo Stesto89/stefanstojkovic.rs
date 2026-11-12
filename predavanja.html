@@ -83,6 +83,18 @@
 .komentar figcaption{margin-top:12px;font-size:.85rem;color:var(--tekst-svetli)}
 .kratki{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
 .kratki span{border:1px solid var(--linija-tamna);background:var(--crna-2);color:var(--bela);border-radius:999px;padding:8px 14px;font-size:.92rem;font-weight:600}
+.slajdovi.kartice{aspect-ratio:auto;display:grid;background:var(--bela);border:1px solid var(--linija);margin-top:28px}
+.slajdovi.kartice .slajd{position:relative;inset:auto;grid-area:1/1}
+.slajdovi.kartice .slajd,.slajdovi.kartice .yt-kartica>*{min-width:0}
+.slajdovi.kartice .yt-slika{width:100%;overflow:hidden}
+.slajdovi.kartice .yt-slika img{width:100%}
+.slajdovi.kartice .yt-kartica{display:grid;grid-template-columns:1.15fr 1fr;border:0;border-radius:0;box-shadow:none;height:100%}
+.slajdovi.kartice .yt-slika{aspect-ratio:auto;height:100%;min-height:300px}
+.slajdovi.kartice .yt-slika img{height:100%;object-fit:cover}
+.slajdovi.kartice .yt-telo{padding:36px 76px 36px 32px;justify-content:center}
+.slajdovi.kartice .yt-telo h3{font-size:1.35rem}
+.slajdovi.kartice .slajd-dugme.levo{left:14px}
+@media (max-width:760px){.slajdovi.kartice .yt-kartica{grid-template-columns:1fr}.slajdovi.kartice .yt-slika{min-height:0;aspect-ratio:16/9}.slajdovi.kartice .yt-telo{padding:22px 22px 80px}.slajdovi.kartice .slajd-dugme{top:auto;bottom:14px;transform:none}}
 .mokra-blok{margin-top:48px;padding-top:40px;border-top:1px solid var(--linija-tamna)}
 .mokra-blok h3{color:var(--bela);font-size:1.5rem;margin-bottom:8px}
 .mokra-blok>p{color:var(--tekst-svetli);margin:0}
@@ -212,63 +224,67 @@
   <div class="kontejner">
     <span class="nadnaslov">Podkasti i razgovori</span>
     <h2>Gostovanja u emisijama i podkastima</h2>
-    <div class="yt-mreza">
-      <article class="yt-kartica">
+    <div class="slajdovi kartice" aria-roledescription="carousel" aria-label="Podkasti i razgovori">
+      <figure class="slajd aktivan"><article class="yt-kartica">
         <a class="yt-slika" href="https://www.youtube.com/watch?v=_uaLyGtETQM" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: Katarza TV, Umeš li da koristiš kalendar?"><img src="https://i.ytimg.com/vi/_uaLyGtETQM/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">59 min</span></a>
         <div class="yt-telo">
           <h3><a href="https://www.youtube.com/watch?v=_uaLyGtETQM" target="_blank" rel="noopener">Katarza TV: Umeš li da koristiš kalendar?</a></h3>
           <p>Maj 2026, uživo. Razlika između znanja o produktivnosti i sistema koji zaista radi, kroz alate, primere i pitanja publike.</p>
         </div>
-      </article>
-      <article class="yt-kartica">
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
         <a class="yt-slika" href="https://management30.com/podcast/embracing-healthy-conflict/" target="_blank" rel="noopener" aria-label="Slušaj Management 3.0 podkast: Embracing Healthy Conflict"><img src="https://management30.com/podcast-covers/embracing-healthy-conflict.jpg" alt="" loading="lazy"></a>
         <div class="yt-telo">
           <h3><a href="https://management30.com/podcast/embracing-healthy-conflict/" target="_blank" rel="noopener">Management 3.0 podkast: zdrav konflikt u timu</a></h3>
           <p>Zašto izbegavanje konflikta na poslu često pravi veći problem i kako lider pretvara neslaganje u bolju odluku. Na engleskom.</p>
         </div>
-      </article>
-      <article class="yt-kartica">
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
         <a class="yt-slika" href="https://youtu.be/IaRB9MP58UU" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: A Project Manager's Guide to Future Proofing Success"><img src="https://i.ytimg.com/vi/IaRB9MP58UU/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">38 min</span></a>
         <div class="yt-telo">
           <h3><a href="https://youtu.be/IaRB9MP58UU" target="_blank" rel="noopener">Life &amp; IT Project Management: kako da upravljanje projektima izdrži promene</a></h3>
           <p>Oktobar 2024. Jednostavan sistem za upravljanje projektima, rad sa timovima u više zemalja i šta AI menja u vođenju projekata. Na engleskom.</p>
         </div>
-      </article>
-      <article class="yt-kartica">
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
         <a class="yt-slika" href="https://www.youtube.com/live/NXjdw0m30qA" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: produktivnost bez preopterećenja"><img src="https://i.ytimg.com/vi/NXjdw0m30qA/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">64 min</span></a>
         <div class="yt-telo">
           <h3><a href="https://www.youtube.com/live/NXjdw0m30qA" target="_blank" rel="noopener">Kako postići više bez osećaja preopterećenosti</a></h3>
           <p>Mart 2025, serijal za project managere. Moj put do lične produktivnosti i kako iste lekcije pomažu da tim radi bolje. Na engleskom.</p>
         </div>
-      </article>
-      <article class="yt-kartica">
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
         <a class="yt-slika" href="https://www.youtube.com/live/NdDYzlO61-0" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: The Art of Doing Less"><img src="https://i.ytimg.com/vi/NdDYzlO61-0/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">28 min</span></a>
         <div class="yt-telo">
           <h3><a href="https://www.youtube.com/live/NdDYzlO61-0" target="_blank" rel="noopener">Umetnost da radiš manje: lider koji ne kontroliše sve</a></h3>
           <p>Avgust 2025, razgovor sa Sarikom Kharbandom. Kako lider prelazi sa „sve radim sam” na „sklanjam prepreke timu”. Na engleskom.</p>
         </div>
-      </article>
-      <article class="yt-kartica">
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
         <a class="yt-slika" href="https://www.youtube.com/live/0orKuVkHr9A" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: Why your answers are holding your team back"><img src="https://i.ytimg.com/vi/0orKuVkHr9A/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">35 min</span></a>
         <div class="yt-telo">
           <h3><a href="https://www.youtube.com/live/0orKuVkHr9A" target="_blank" rel="noopener">Zašto tvoji odgovori koče tim</a></h3>
           <p>Septembar 2025, razgovor sa Sarikom Kharbandom. Kad lider uvek ima odgovor, tim prestaje da razmišlja. Kako da pitanjima vratiš odluke timu. Na engleskom.</p>
         </div>
-      </article>
-      <article class="yt-kartica">
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
         <a class="yt-slika" href="https://youtu.be/ZBWCLds-bu4" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: Prodaja i isporuka, zašto je AI ključ uspeha u 2026"><img src="https://i.ytimg.com/vi/ZBWCLds-bu4/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">67 min</span></a>
         <div class="yt-telo">
           <h3><a href="https://youtu.be/ZBWCLds-bu4" target="_blank" rel="noopener">Webinar: kako AI menja prodaju i isporuku</a></h3>
           <p>Jun 2026. Gde AI stvarno pomaže uslužnoj firmi u prodaji i isporuci, a gde samo ubrza haos koji već postoji.</p>
         </div>
-      </article>
-      <article class="yt-kartica">
+      </article></figure>
+      <figure class="slajd"><article class="yt-kartica">
         <a class="yt-slika" href="https://www.youtube.com/watch?v=SYolqqm1GqA" target="_blank" rel="noopener" aria-label="Pusti na YouTube-u: Kanban Board For Development"><img src="https://i.ytimg.com/vi/SYolqqm1GqA/hqdefault.jpg" alt="" loading="lazy"><span class="yt-trajanje">2 min</span></a>
         <div class="yt-telo">
           <h3><a href="https://www.youtube.com/watch?v=SYolqqm1GqA" target="_blank" rel="noopener">LeanVlog: tri stvari o Kanban tabli, po mom tekstu</a></h3>
           <p>Novembar 2022. Kratak video Lean Community kanala napravljen po mom tekstu o tome zašto Kanban nije samo tabla. Na engleskom.</p>
         </div>
-      </article>
+      </article></figure>
+      <button class="slajd-dugme levo" type="button" aria-label="Prethodni razgovor"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="slajd-dugme desno" type="button" aria-label="Sledeći razgovor"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="slajd-tacke"></div>
     </div>
   </div>
 </section>
