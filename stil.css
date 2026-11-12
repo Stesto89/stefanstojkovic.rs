@@ -525,3 +525,22 @@ p { margin: 0 0 1em; }
 .blog-kartica h2 a:hover { color: var(--narandzasta); }
 .blog-kartica p { color: var(--tekst-2); }
 .blog-kartica .yt-cta { margin-top: auto; }
+
+/* Utisci sa fotografijom (ime, uloga, firma) */
+.utisci-foto{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.utisak-foto{margin:0;background:var(--bela);border:1px solid var(--linija);border-radius:var(--radius);box-shadow:var(--senka);padding:24px 24px 20px;display:flex;flex-direction:column}
+.utisak-foto blockquote{margin:0 0 18px;font-size:1.02rem;line-height:1.6;color:var(--tekst)}
+.utisak-foto blockquote::before{content:"“";display:block;font-size:2.8rem;line-height:.6;color:var(--naglasak);font-weight:800;margin-bottom:8px}
+.utisak-foto figcaption{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--linija)}
+.utisak-foto img{flex:0 0 56px;width:56px;height:56px;border-radius:50%;object-fit:cover}
+.utisak-foto strong{display:block;line-height:1.3;color:var(--tekst)}
+.utisak-foto span{display:block;font-size:.88rem;line-height:1.4;color:var(--tekst-2)}
+.utisak-foto span b{color:var(--tekst);font-weight:700}
+.utisak-foto .vrsta{display:inline-block;align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--narandzasta-tamna,#B35A32);margin-bottom:10px}
+.tamna .utisak-foto{background:var(--crna-2);border-color:var(--linija-tamna);box-shadow:none}
+.tamna .utisak-foto blockquote,.tamna .utisak-foto strong,.tamna .utisak-foto span b{color:var(--bela)}
+.tamna .utisak-foto span{color:var(--tekst-svetli)}
+.tamna .utisak-foto figcaption{border-top-color:var(--linija-tamna)}
+.tamna .utisak-foto .vrsta{color:var(--naglasak)}
+@media (max-width:900px){.utisci-foto{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.utisci-foto{grid-template-columns:1fr}}
