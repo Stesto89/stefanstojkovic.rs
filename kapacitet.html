@@ -56,13 +56,17 @@ fbq('init','2146159002963753');fbq('track','PageView');
 .vsl-citat span{font-size:.9rem;color:var(--tekst-2)}
 .vsl-citat .rez{font-weight:800;font-size:1.12rem;line-height:1.3;margin:0 0 10px;color:var(--tekst)}
 .vsl-citat .inicijali{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:var(--crna);color:var(--narandzasta);display:grid;place-items:center;font-weight:800}
+.vsl-citat.ima-video{grid-column:1/-1;flex-direction:row;gap:26px;align-items:flex-start}
+.vsl-vid{flex:0 0 220px}
+.vsl-vid video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#000;display:block}
+.vsl-tekst{flex:1;display:flex;flex-direction:column;align-self:stretch}
 .vsl-citati .vsl-citat:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 10px);justify-self:center}
 .vsl-dokaz .dugmad{justify-content:center;margin-top:36px}
 .lender-zaglavlje{position:static}
 .lender-zaglavlje .kontejner{justify-content:center}
 .lender-podnozje{padding:22px 0}
 .lender-podnozje .dno{margin:0;padding:0;border:0}
-@media (max-width:640px){
+@media (max-width:640px){.vsl-citat.ima-video{flex-direction:column}.vsl-vid{flex:none;width:100%;max-width:300px;margin:0 auto 6px}
   .vsl-citati{grid-template-columns:1fr}
   .vsl-citati .vsl-citat:last-child:nth-child(odd){max-width:none}
   .vsl-dokaz{padding:48px 0 56px}
@@ -102,20 +106,37 @@ fbq('init','2146159002963753');fbq('track','PageView');
   <div class="kontejner">
     <h2>Šta kažu vlasnici i lideri sa kojima sam radio</h2>
     <div class="vsl-citati">
-      <figure class="vsl-citat">
+      <figure class="vsl-citat ima-video">
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/dusan-floumate.jpg?v=1793707830"><source src="video/dusan-floumate.mp4?v=1794349691" type="video/mp4"></video></div>
+        <div class="vsl-tekst">
         <div class="rez">Dva nova klijenta, bez novog zaposlenog</div>
         <blockquote>Nisam zaposlio osobu i nisam dao 6.000 € za 4 meseca, a otvorio sam sebi kapacitet da ubacim još 2 klijenta. Sa istim troškovima, s istom radnom snagom, napravio sam više para.</blockquote>
-        <figcaption><img src="img/dusan.jpg" alt="Dušan Kocić" loading="lazy"><div><strong>Dušan Kocić</strong><span>vlasnik, Floumate</span></div></figcaption>
+        <figcaption><div><strong>Dušan Kocić</strong><span>vlasnik, Floumate</span></div></figcaption>
+        </div>
       </figure>
-      <figure class="vsl-citat">
+      <figure class="vsl-citat ima-video">
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/patrick-burns.jpg?v=1793705495"><source src="video/patrick-burns.mp4?v=1794349691" type="video/mp4"></video></div>
+        <div class="vsl-tekst">
         <div class="rez">Agencija spremna za rast</div>
         <blockquote>Stefan je bio presudan da u agenciji izgradimo infrastrukturu koja može da raste. Unosi jasnoću, strukturu i disciplinu u složene sisteme. Bez njegovog vođenja operative ne bismo mogli da porastemo do nivoa kojem težimo. Preporučujem ga svakom osnivaču koji ozbiljno želi da skalira biznis na pravi način.</blockquote>
-        <figcaption><img src="img/patrick.jpg" alt="Patrick Burns" loading="lazy"><div><strong>Patrick Burns</strong><span>osnivač, Patrick Burns Co., SAD</span></div></figcaption>
+        <figcaption><div><strong>Patrick Burns</strong><span>osnivač, Patrick Burns Co., SAD</span></div></figcaption>
+        </div>
       </figure>
-      <figure class="vsl-citat">
+      <figure class="vsl-citat ima-video">
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/aleksandar-otvori.jpg?v=1793870295"><source src="video/aleksandar-otvori.mp4?v=1794349691" type="video/mp4"></video></div>
+        <div class="vsl-tekst">
         <div class="rez">Jedna radionica: vidljivo sve što radimo duplo</div>
         <blockquote>Toliko stvari nam se raščistilo na jednoj radionici: koliko taskova radimo duplo, koliko nismo automatizovali, a mogli smo.</blockquote>
-        <figcaption><img src="img/aleksandar.jpg" alt="Aleksandar Vasić" loading="lazy"><div><strong>Aleksandar Vasić</strong><span>Otvori LLC</span></div></figcaption>
+        <figcaption><div><strong>Aleksandar Vasić</strong><span>Otvori LLC</span></div></figcaption>
+        </div>
+      </figure>
+      <figure class="vsl-citat ima-video">
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/zerina.jpg?v=1793627867"><source src="video/zerina.mp4?v=1794349692" type="video/mp4"></video></div>
+        <div class="vsl-tekst">
+        <div class="rez">Sve automatizacije na jednom mestu</div>
+        <blockquote>Automatizovali smo sve što generalno može da se automatizuje. I sad imam sve na jednom mjestu. Kad uđem, znam šta se desilo, sa kojim lidom.</blockquote>
+        <figcaption><div><strong>Zerina</strong><span>online edukacija</span></div></figcaption>
+        </div>
       </figure>
       <figure class="vsl-citat">
         <div class="rez">Stabilniji tim, realniji rokovi</div>
