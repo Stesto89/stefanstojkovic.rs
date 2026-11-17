@@ -59,6 +59,10 @@ fbq('init','2146159002963753');fbq('track','PageView');
 .vsl-citat.ima-video{grid-column:1/-1;flex-direction:row;gap:26px;align-items:flex-start}
 .vsl-vid{flex:0 0 220px}
 .vsl-vid video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#000;display:block}
+.vsl-vid{position:relative}
+.vsl-plej{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;padding:0;border:0;background:none;cursor:pointer;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45));transition:transform .15s}
+.vsl-plej:hover{transform:scale(1.08)}.vsl-plej svg{width:100%;height:100%;display:block}
+.vsl-vid.igra .vsl-plej{display:none}
 .vsl-tekst{flex:1;display:flex;flex-direction:column;align-self:stretch}
 .vsl-citati .vsl-citat:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 10px);justify-self:center}
 .vsl-dokaz .dugmad{justify-content:center;margin-top:36px}
@@ -106,7 +110,7 @@ fbq('init','2146159002963753');fbq('track','PageView');
     <h2>Šta kažu vlasnici i lideri sa kojima sam radio</h2>
     <div class="vsl-citati">
       <figure class="vsl-citat ima-video">
-        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/dusan-floumate.jpg?v=1793707830"><source src="video/dusan-floumate.mp4?v=1794349691" type="video/mp4"></video></div>
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/dusan-floumate.jpg?v=1793707830"><source src="video/dusan-floumate.mp4?v=1794349691" type="video/mp4"></video><button class="vsl-plej" type="button" aria-label="Pusti video"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#E36B2F"/><path d="M32 24l26 16-26 16z" fill="#fff"/></svg></button></div>
         <div class="vsl-tekst">
         <div class="rez">Dva nova klijenta, bez novog zaposlenog</div>
         <blockquote>Nisam zaposlio osobu i nisam dao 6.000 € za 4 meseca, a otvorio sam sebi kapacitet da ubacim još 2 klijenta. Sa istim troškovima, s istom radnom snagom, napravio sam više para.</blockquote>
@@ -114,7 +118,7 @@ fbq('init','2146159002963753');fbq('track','PageView');
         </div>
       </figure>
       <figure class="vsl-citat ima-video">
-        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/patrick-burns.jpg?v=1793705495"><source src="video/patrick-burns.mp4?v=1794349691" type="video/mp4"></video></div>
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/patrick-burns.jpg?v=1793705495"><source src="video/patrick-burns.mp4?v=1794349691" type="video/mp4"></video><button class="vsl-plej" type="button" aria-label="Pusti video"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#E36B2F"/><path d="M32 24l26 16-26 16z" fill="#fff"/></svg></button></div>
         <div class="vsl-tekst">
         <div class="rez">Agencija spremna za rast</div>
         <blockquote>Stefan je bio presudan da u agenciji izgradimo infrastrukturu koja može da raste. Unosi jasnoću, strukturu i disciplinu u složene sisteme. Bez njegovog vođenja operative ne bismo mogli da porastemo do nivoa kojem težimo. Preporučujem ga svakom osnivaču koji ozbiljno želi da skalira biznis na pravi način.</blockquote>
@@ -122,7 +126,7 @@ fbq('init','2146159002963753');fbq('track','PageView');
         </div>
       </figure>
       <figure class="vsl-citat ima-video">
-        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/aleksandar-otvori.jpg?v=1793870295"><source src="video/aleksandar-otvori.mp4?v=1794349691" type="video/mp4"></video></div>
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/aleksandar-otvori.jpg?v=1793870295"><source src="video/aleksandar-otvori.mp4?v=1794349691" type="video/mp4"></video><button class="vsl-plej" type="button" aria-label="Pusti video"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#E36B2F"/><path d="M32 24l26 16-26 16z" fill="#fff"/></svg></button></div>
         <div class="vsl-tekst">
         <div class="rez">Jedna radionica: vidljivo sve što radimo duplo</div>
         <blockquote>Toliko stvari nam se raščistilo na jednoj radionici: koliko taskova radimo duplo, koliko nismo automatizovali, a mogli smo.</blockquote>
@@ -130,7 +134,7 @@ fbq('init','2146159002963753');fbq('track','PageView');
         </div>
       </figure>
       <figure class="vsl-citat ima-video">
-        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/zerina.jpg?v=1793627867"><source src="video/zerina.mp4?v=1794349692" type="video/mp4"></video></div>
+        <div class="vsl-vid"><video controls preload="none" playsinline poster="video/zerina.jpg?v=1793627867"><source src="video/zerina.mp4?v=1794349692" type="video/mp4"></video><button class="vsl-plej" type="button" aria-label="Pusti video"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#E36B2F"/><path d="M32 24l26 16-26 16z" fill="#fff"/></svg></button></div>
         <div class="vsl-tekst">
         <div class="rez">Sve automatizacije na jednom mestu</div>
         <blockquote>Automatizovali smo sve što generalno može da se automatizuje. I sad imam sve na jednom mjestu. Kad uđem, znam šta se desilo, sa kojim lidom.</blockquote>
@@ -157,6 +161,9 @@ fbq('init','2146159002963753');fbq('track','PageView');
   </div>
 </section>
 
+<script>
+(function(){document.querySelectorAll(".vsl-vid").forEach(function(w){var v=w.querySelector("video"),b=w.querySelector(".vsl-plej");b.addEventListener("click",function(){v.play();});v.addEventListener("play",function(){w.classList.add("igra");});v.addEventListener("pause",function(){w.classList.remove("igra");});v.addEventListener("ended",function(){w.classList.remove("igra");});});})();
+</script>
 <script>
 (function(){
   var v=document.getElementById('vsl'),b=document.getElementById('vsl-zvuk');
